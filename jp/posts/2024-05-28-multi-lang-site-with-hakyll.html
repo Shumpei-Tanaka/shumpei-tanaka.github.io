@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="jp" class="has-navbar-fixed-top" style="scroll-padding-top: 70px;">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>S6T4 - Hakyllでファイルベースの多言語対応サイトを作る</title>
+        <link rel="stylesheet" href="../../css/bulma.css" />
+        <link rel="stylesheet" href="../../css/syntax.css" />
+        <script src="../../js/default.js"></script>
+        <meta name="msapplication-square70x70logo" content="/favicons/site-tile-70x70.png">
+        <meta name="msapplication-square150x150logo" content="/favicons/site-tile-150x150.png">
+        <meta name="msapplication-wide310x150logo" content="/favicons/site-tile-310x150.png">
+        <meta name="msapplication-square310x310logo" content="/favicons/site-tile-310x310.png">
+        <meta name="msapplication-TileColor" content="#0078d7">
+        <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="../../favicons/favicon.ico">
+        <link rel="icon" type="image/vnd.microsoft.icon" href="../../favicons/favicon.ico">
+        <link rel="apple-touch-icon" sizes="57x57" href="../../favicons/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="../../favicons/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="../../favicons/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="../../favicons/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="../../favicons/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="../../favicons/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="../../favicons/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="../../favicons/apple-touch-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="../../favicons/apple-touch-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="36x36" href="../../favicons/android-chrome-36x36.png">
+        <link rel="icon" type="image/png" sizes="48x48" href="../../favicons/android-chrome-48x48.png">
+        <link rel="icon" type="image/png" sizes="72x72" href="../../favicons/android-chrome-72x72.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../../favicons/android-chrome-96x96.png">
+        <link rel="icon" type="image/png" sizes="128x128" href="../../favicons/android-chrome-128x128.png">
+        <link rel="icon" type="image/png" sizes="144x144" href="../../favicons/android-chrome-144x144.png">
+        <link rel="icon" type="image/png" sizes="152x152" href="../../favicons/android-chrome-152x152.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="../../favicons/android-chrome-192x192.png">
+        <link rel="icon" type="image/png" sizes="256x256" href="../../favicons/android-chrome-256x256.png">
+        <link rel="icon" type="image/png" sizes="384x384" href="../../favicons/android-chrome-384x384.png">
+        <link rel="icon" type="image/png" sizes="512x512" href="../../favicons/android-chrome-512x512.png">
+        <link rel="icon" type="image/png" sizes="36x36" href="../../favicons/icon-36x36.png">
+        <link rel="icon" type="image/png" sizes="48x48" href="../../favicons/icon-48x48.png">
+        <link rel="icon" type="image/png" sizes="72x72" href="../../favicons/icon-72x72.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../../favicons/icon-96x96.png">
+        <link rel="icon" type="image/png" sizes="128x128" href="../../favicons/icon-128x128.png">
+        <link rel="icon" type="image/png" sizes="144x144" href="../../favicons/icon-144x144.png">
+        <link rel="icon" type="image/png" sizes="152x152" href="../../favicons/icon-152x152.png">
+        <link rel="icon" type="image/png" sizes="160x160" href="../../favicons/icon-160x160.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="../../favicons/icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="196x196" href="../../favicons/icon-196x196.png">
+        <link rel="icon" type="image/png" sizes="256x256" href="../../favicons/icon-256x256.png">
+        <link rel="icon" type="image/png" sizes="384x384" href="../../favicons/icon-384x384.png">
+        <link rel="icon" type="image/png" sizes="512x512" href="../../favicons/icon-512x512.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../favicons/icon-16x16.png">
+        <link rel="icon" type="image/png" sizes="24x24" href="../../favicons/icon-24x24.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../favicons/icon-32x32.png">
+        <link rel="manifest" href="../../favicons/manifest.json">
+    </head>
+    <body style="scroll-padding-top: 70px;">
+            <header class="navbar has-background-primary-dark is-fixed-top" role="navigation" aria-label="main navigation">
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="../../">
+                        <span class="title is-1">
+                            S6T4
+                        </span>
+                    </a>
+                    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="mainnav">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+                <div id="mainnav" class="navbar-menu has-background-primary-dark">
+                    <div class="navbar-start"> 
+                        <a class="navbar-item is-size-4 has-text-info" href="../../">Home</a>
+                        <a class="navbar-item is-size-4 has-text-info" href="../../archive.html">Archive</a>
+                    </div>
+                </div>
+            </header>
+        
+        <div class="mt-4" align="right">
+            <table class="table has-background-info-dark">
+                <tbody>
+                    <th class="is-vcentered is-centered">
+                        lang
+                    </th>
+                    
+                        <td>
+                            <a class="button is-link" href="../../en/posts/2024-05-28-multi-lang-site-with-hakyll.html">en</a>
+                        </td>
+                    
+                        <td>
+                            <a class="button is-link" href="../../jp/posts/2024-05-28-multi-lang-site-with-hakyll.html">jp</a>
+                        </td>
+                    
+                </tbody>
+            </table>
+        </div>
+        
+        <main class="container is-fluid mt-5">
+            <div class="content">
+                <h2>Hakyllでファイルベースの多言語対応サイトを作る</h2>
+                <div class="container my-5">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Published
+                </th>
+                <th>
+                    Last Update 
+                </th>
+                
+                    <th>
+                        author
+                    </th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    2024/05/28
+                </td>  
+                <td>
+                    
+                    2024/05/28
+                    
+                </td>
+                
+                    <td>
+                        Shumpei Tanaka
+                    </td>
+                
+            </tr>
+        </tbody>
+    </table>
+
+    
+
+    
+
+</div>
+<article class="container">
+    <h2 id="構想-ファイルベースで多言語"><a href="#構想-ファイルベースで多言語" class="headerLink" title="構想: ファイルベースで多言語">構想: ファイルベースで多言語</a></h2>
+<p>次のような構成で記事を書いて多言語サイトを作る</p>
+<ul>
+<li>posts/2024-05-28-filename-en.md</li>
+<li>posts/2024-05-28-filename-jp.md</li>
+</ul>
+<h2 id="具体例"><a href="#具体例" class="headerLink" title="具体例">具体例</a></h2>
+<p>このサイトは上記構成で作成している。
+後日エンジン部分を分離し公開する予定。</p>
+<h2 id="route-の変更"><a href="#route-の変更" class="headerLink" title="Route の変更">Route の変更</a></h2>
+<p>まずは <code>Route</code> を変更する。変更のイメージを次に示す。</p>
+<ul>
+<li>元ファイルのパス
+<ul>
+<li>posts/2024-05-28-filename-en.md</li>
+<li>posts/2024-05-28-filename-jp.md</li>
+</ul></li>
+<li>変換後 html のパス
+<ul>
+<li>en/2024-05-28-filename.html</li>
+<li>jp/2024-05-28-filename.html</li>
+</ul></li>
+</ul>
+<p>これを実現するには <code>Route</code> を書き換えてやればよい。</p>
+<ul>
+<li>route 部分を抜粋</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>match (fromArticle <span class="st">&quot;posts/*&quot;</span>) <span class="op">$</span> <span class="kw">do</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    route langRoute</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ot">langRoute ::</span> <span class="dt">Routes</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>langRoute <span class="ot">=</span> customRoute ((<span class="ot">`replaceExtension`</span> <span class="st">&quot;.html&quot;</span>) <span class="op">.</span> getLangPath)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="ot">langseperator ::</span> <span class="dt">String</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>langseperator <span class="ot">=</span> <span class="st">&quot;-&quot;</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="ot">takeLang ::</span> <span class="dt">Identifier</span> <span class="ot">-&gt;</span> <span class="dt">String</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>takeLang <span class="ot">=</span> <span class="fu">last</span> <span class="op">.</span> splitAll langseperator <span class="op">.</span> takeBaseName <span class="op">.</span> toFilePath</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="ot">dropLang ::</span> <span class="dt">Identifier</span> <span class="ot">-&gt;</span> <span class="dt">String</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>dropLang <span class="ot">=</span> L.intercalate langseperator <span class="op">.</span> <span class="fu">init</span> <span class="op">.</span> splitAll langseperator <span class="op">.</span> toFilePath</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="ot">getLangPath ::</span> <span class="dt">Identifier</span> <span class="ot">-&gt;</span> <span class="dt">String</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>getLangPath <span class="fu">id</span> <span class="ot">=</span> lang <span class="ot">`combine`</span> dropLang <span class="fu">id</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  <span class="kw">where</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    lang <span class="ot">=</span> takeLang <span class="fu">id</span></span></code></pre></div>
+<p>行っている操作はシンプルで、次のような操作を行っている。</p>
+<ul>
+<li><code>Identifier</code> からファイルパスをもらう</li>
+<li>文字列操作で<code>-en</code>、<code>-jp</code>の言語部分を抜き出す</li>
+<li>単純に入れ替えて<code>/</code>で繋ぎなおす</li>
+</ul>
+<h2 id="同じ記事の多言語バージョンへのリンクを埋め込む"><a href="#同じ記事の多言語バージョンへのリンクを埋め込む" class="headerLink" title="同じ記事の多言語バージョンへのリンクを埋め込む">同じ記事の多言語バージョンへのリンクを埋め込む</a></h2>
+<p>この操作が肝になる。<code>Route</code> の変更は容易いがこの実装に苦労した。</p>
+<p>次のような方法で実装している。</p>
+<ul>
+<li><code>filename-lang.md</code>という Identifier から、<code>filename</code>が一致するものを検索
+<ul>
+<li><code>filename*</code>という<code>Pattern</code>で検索する</li>
+</ul></li>
+<li>見つかったすべての<code>-lang</code>違いのものの情報をリストとして埋め込む</li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ot">anothorLangFields ::</span> <span class="dt">String</span> <span class="ot">-&gt;</span> <span class="dt">Snapshot</span> <span class="ot">-&gt;</span> <span class="dt">Context</span> <span class="dt">String</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>anothorLangFields name snapshot <span class="ot">=</span> listFieldWith name baseCtx f</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">where</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    f item <span class="ot">=</span> loadAllSnapshots (fromGlob (mainname <span class="op">++</span> <span class="st">&quot;*&quot;</span>)) snapshot</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>      <span class="kw">where</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>        <span class="fu">id</span> <span class="ot">=</span> itemIdentifier item</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>        mainname <span class="ot">=</span> dropLang <span class="fu">id</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>        lang <span class="ot">=</span> takeLang <span class="fu">id</span></span></code></pre></div>
+<p><code>anothorLangFields</code>を埋め込む実装は次の通り</p>
+<ul>
+<li><code>snapshot</code> を作り <code>postCtx</code> を使って<code>template</code>を適用する</li>
+</ul>
+<div class="sourceCode" id="cb4"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>match (fromArticle <span class="st">&quot;posts/*&quot;</span>) <span class="op">$</span> <span class="kw">do</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    route langRoute</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    compile <span class="op">$</span> <span class="kw">do</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>        pandocCompiler</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>            <span class="op">&gt;&gt;=</span> saveSnapshot <span class="st">&quot;posts-content&quot;</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>            <span class="op">&gt;&gt;=</span> loadAndApplyTemplate (idBase <span class="st">&quot;templates/post.html&quot;</span>) postCtx</span></code></pre></div>
+<ul>
+<li><code>postCtx</code> は <code>baseCtx</code> と <code>anothorLangFields</code> を繋げたもの</li>
+</ul>
+<div class="sourceCode" id="cb5"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ot">postCtx ::</span> <span class="dt">Context</span> <span class="dt">String</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>postCtx <span class="ot">=</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    baseCtx</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>        <span class="ot">`mappend`</span> anothorLangFields <span class="st">&quot;anothorLangs&quot;</span> <span class="st">&quot;posts-content&quot;</span></span></code></pre></div>
+<ul>
+<li><code>baseCtx</code> は基本的な情報を埋め込むコンテキスト</li>
+</ul>
+<div class="sourceCode" id="cb6"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ot">baseCtx ::</span> <span class="dt">Context</span> <span class="dt">String</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>baseCtx <span class="ot">=</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    dateField <span class="st">&quot;date&quot;</span> <span class="st">&quot;%Y/%m/%d&quot;</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>        <span class="ot">`mappend`</span> dateFieldMeta <span class="st">&quot;last-modified&quot;</span> <span class="st">&quot;last-modified&quot;</span> <span class="st">&quot;%Y/%m/%d&quot;</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>        <span class="ot">`mappend`</span> readTimeField <span class="st">&quot;readtime&quot;</span> <span class="st">&quot;posts-content&quot;</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>        <span class="ot">`mappend`</span> langField <span class="st">&quot;lang&quot;</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>        <span class="ot">`mappend`</span> sameLangField <span class="st">&quot;home&quot;</span> <span class="st">&quot;index&quot;</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>        <span class="ot">`mappend`</span> defaultContext</span></code></pre></div>
+<p>これでコンテキストは次のような構造になる</p>
+<ul>
+<li>date</li>
+<li>last-modified</li>
+<li>readtime</li>
+<li>lang</li>
+<li>home</li>
+<li>(defaultContext)</li>
+<li>anotherlangs
+<ul>
+<li>date</li>
+<li>last-modified</li>
+<li>readtime</li>
+<li>lang</li>
+<li>home</li>
+<li>(defaultContext)</li>
+</ul></li>
+</ul>
+<p>すなわち、<code>template</code>で次のように呼び出すことが可能となる</p>
+<ul>
+<li>ある記事の<code>lang</code>違いの情報を表示する<code>template</code></li>
+</ul>
+<div class="sourceCode" id="cb7"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>$for(anothorLangs)$</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">tr</span><span class="dt">&gt;</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">td</span><span class="dt">&gt;</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;$url$&quot;</span><span class="dt">&gt;</span>$title$ ($lang$)<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">td</span><span class="dt">&gt;</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">td</span><span class="dt">&gt;</span>$date$<span class="dt">&lt;/</span><span class="kw">td</span><span class="dt">&gt;</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">td</span><span class="dt">&gt;</span>$if(last-modified)$ $last-modified$ $else$ $date$ $endif$<span class="dt">&lt;/</span><span class="kw">td</span><span class="dt">&gt;</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">tr</span><span class="dt">&gt;</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>$endfor$</span></code></pre></div>
+<h2 id="routeを変更したうえで-md-の内部リンクをする"><a href="#routeを変更したうえで-md-の内部リンクをする" class="headerLink" title="Routeを変更したうえで md の内部リンクをする"><code>Route</code>を変更したうえで md の内部リンクをする</a></h2>
+<p>これはより汎的な内容のため別ページに分離。</p>
+<p><a href="../../jp/posts/2024-05-28-inter-link-routing-hakyll.html">Hakyll で Route を変更した上で内部リンクを使う</a></p>
+<h2 id="post-list-を再編成する"><a href="#post-list-を再編成する" class="headerLink" title="post list を再編成する">post list を再編成する</a></h2>
+<p>この方式では、単に<code>posts/*.md</code>を読み込むと<code>-en.md</code>と<code>-jp.md</code>がそれぞれ並べられてしまう。</p>
+<p><code>posts/file-lang.md</code>のうち<code>file</code>が一致するものは一つに絞りたい。この実装をする。</p>
+<p>次のように読み込んだ<code>posts/*</code>に対して<code>filterUniqs</code>を適用し、<code>file</code>がユニークなもののみ残す。</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>compile <span class="op">$</span> <span class="kw">do</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    posts <span class="ot">&lt;-</span> recentFirst <span class="op">.</span> filterUniqs <span class="op">=&lt;&lt;</span> loadAllSnapshots <span class="st">&quot;posts/*&quot;</span> <span class="st">&quot;posts-content&quot;</span></span></code></pre></div>
+<p><code>filterUniqs</code>は、やってくる <code>[Item String]</code>に対して<code>-lang</code>部分を落としたファイル名が一致しないもののみ
+後ろにつけてリストを再構築する関数として定義する。</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ot">filterUniqs ::</span> [<span class="dt">Item</span> <span class="dt">String</span>] <span class="ot">-&gt;</span> [<span class="dt">Item</span> <span class="dt">String</span>]</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>filterUniqs [] <span class="ot">=</span> []</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>filterUniqs (x <span class="op">:</span> xs) <span class="ot">=</span> x <span class="op">:</span> filterUniqs (<span class="fu">filter</span> ((<span class="op">/=</span> f x) <span class="op">.</span> f) xs)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">where</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    f <span class="ot">=</span> dropLang <span class="op">.</span> itemIdentifier</span></code></pre></div>
+<p>これで期待した操作を実現することができる。</p>
+</article>
+
+<div class="card mt-5">
+    <div class="card-header">
+        <p class="card-header-title title is-4">Say thank you</p>
+    </div>
+    <div class="card-content">
+        <div class="content">
+            役立ったら下のリンクから支援をもらえると嬉しい
+        </div>
+        <a href="https://paypal.me/s6tanaka">
+    <img alt="paypal.me Badge" src="https://img.shields.io/badge/paypal.me-s6tanaka-white?style=flat-squere:badgeContent&logo=paypal">
+</a>
+<a href="https://www.buymeacoffee.com/s6tanaka">
+    <img alt="paypal.me Badge" src="https://img.shields.io/badge/buy_me_a_coffee-s6tanaka-white?style=flat-squere:badgeContent&logo=buymeacoffee&logocolor=#FFDD00">
+</a>
+    </div>
+</div>
+
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+//    this.page.url = "/jp/posts/2024-05-28-multi-lang-site-with-hakyll.html";
+//    this.page.identifier = PAGE_IDENTIFIER;
+    this.language = "jp";
+    };
+    
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://s6t4.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="content has-text-centered">
+                
+                    <a href="../../">
+                
+                    back to home
+                </a>
+                <p>
+                    Site proudly generated by
+                    <a href="http://jaspervdj.be/hakyll">Hakyll</a>
+                    ,
+                    <a href="https://bulma.io/">Bulma</a>
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>
