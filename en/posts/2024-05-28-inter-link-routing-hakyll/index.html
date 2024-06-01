@@ -1,56 +1,56 @@
 <!doctype html>
-<html lang="jp" class="has-navbar-fixed-top" style="scroll-padding-top: 70px;" data-theme="dark">
+<html lang="en" class="has-navbar-fixed-top" style="scroll-padding-top: 70px;" data-theme="dark">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>S6T4 - HakyllでRouteを変更した上で内部リンクを使う</title>
-        <link rel="stylesheet" href="../../css/bulma.css" />
-        <link rel="stylesheet" href="../../css/syntax.css" />
-        <script src="../../js/default.js"></script>
+        <title>S6T4 - to use inter link in md with modified Route by Hakyll</title>
+        <link rel="stylesheet" href="../../../css/bulma.css" />
+        <link rel="stylesheet" href="../../../css/syntax.css" />
+        <script src="../../../js/default.js"></script>
         <meta name="msapplication-square70x70logo" content="/favicons/site-tile-70x70.png">
         <meta name="msapplication-square150x150logo" content="/favicons/site-tile-150x150.png">
         <meta name="msapplication-wide310x150logo" content="/favicons/site-tile-310x150.png">
         <meta name="msapplication-square310x310logo" content="/favicons/site-tile-310x310.png">
         <meta name="msapplication-TileColor" content="#0078d7">
-        <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="../../favicons/favicon.ico">
-        <link rel="icon" type="image/vnd.microsoft.icon" href="../../favicons/favicon.ico">
-        <link rel="apple-touch-icon" sizes="57x57" href="../../favicons/apple-touch-icon-57x57.png">
-        <link rel="apple-touch-icon" sizes="60x60" href="../../favicons/apple-touch-icon-60x60.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="../../favicons/apple-touch-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="76x76" href="../../favicons/apple-touch-icon-76x76.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="../../favicons/apple-touch-icon-114x114.png">
-        <link rel="apple-touch-icon" sizes="120x120" href="../../favicons/apple-touch-icon-120x120.png">
-        <link rel="apple-touch-icon" sizes="144x144" href="../../favicons/apple-touch-icon-144x144.png">
-        <link rel="apple-touch-icon" sizes="152x152" href="../../favicons/apple-touch-icon-152x152.png">
-        <link rel="apple-touch-icon" sizes="180x180" href="../../favicons/apple-touch-icon-180x180.png">
-        <link rel="icon" type="image/png" sizes="36x36" href="../../favicons/android-chrome-36x36.png">
-        <link rel="icon" type="image/png" sizes="48x48" href="../../favicons/android-chrome-48x48.png">
-        <link rel="icon" type="image/png" sizes="72x72" href="../../favicons/android-chrome-72x72.png">
-        <link rel="icon" type="image/png" sizes="96x96" href="../../favicons/android-chrome-96x96.png">
-        <link rel="icon" type="image/png" sizes="128x128" href="../../favicons/android-chrome-128x128.png">
-        <link rel="icon" type="image/png" sizes="144x144" href="../../favicons/android-chrome-144x144.png">
-        <link rel="icon" type="image/png" sizes="152x152" href="../../favicons/android-chrome-152x152.png">
-        <link rel="icon" type="image/png" sizes="192x192" href="../../favicons/android-chrome-192x192.png">
-        <link rel="icon" type="image/png" sizes="256x256" href="../../favicons/android-chrome-256x256.png">
-        <link rel="icon" type="image/png" sizes="384x384" href="../../favicons/android-chrome-384x384.png">
-        <link rel="icon" type="image/png" sizes="512x512" href="../../favicons/android-chrome-512x512.png">
-        <link rel="icon" type="image/png" sizes="36x36" href="../../favicons/icon-36x36.png">
-        <link rel="icon" type="image/png" sizes="48x48" href="../../favicons/icon-48x48.png">
-        <link rel="icon" type="image/png" sizes="72x72" href="../../favicons/icon-72x72.png">
-        <link rel="icon" type="image/png" sizes="96x96" href="../../favicons/icon-96x96.png">
-        <link rel="icon" type="image/png" sizes="128x128" href="../../favicons/icon-128x128.png">
-        <link rel="icon" type="image/png" sizes="144x144" href="../../favicons/icon-144x144.png">
-        <link rel="icon" type="image/png" sizes="152x152" href="../../favicons/icon-152x152.png">
-        <link rel="icon" type="image/png" sizes="160x160" href="../../favicons/icon-160x160.png">
-        <link rel="icon" type="image/png" sizes="192x192" href="../../favicons/icon-192x192.png">
-        <link rel="icon" type="image/png" sizes="196x196" href="../../favicons/icon-196x196.png">
-        <link rel="icon" type="image/png" sizes="256x256" href="../../favicons/icon-256x256.png">
-        <link rel="icon" type="image/png" sizes="384x384" href="../../favicons/icon-384x384.png">
-        <link rel="icon" type="image/png" sizes="512x512" href="../../favicons/icon-512x512.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="../../favicons/icon-16x16.png">
-        <link rel="icon" type="image/png" sizes="24x24" href="../../favicons/icon-24x24.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="../../favicons/icon-32x32.png">
-        <link rel="manifest" href="../../favicons/manifest.json">
+        <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="../../../favicons/favicon.ico">
+        <link rel="icon" type="image/vnd.microsoft.icon" href="../../../favicons/favicon.ico">
+        <link rel="apple-touch-icon" sizes="57x57" href="../../../favicons/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="../../../favicons/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="../../../favicons/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="../../../favicons/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="../../../favicons/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="../../../favicons/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="../../../favicons/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="../../../favicons/apple-touch-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../favicons/apple-touch-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="36x36" href="../../../favicons/android-chrome-36x36.png">
+        <link rel="icon" type="image/png" sizes="48x48" href="../../../favicons/android-chrome-48x48.png">
+        <link rel="icon" type="image/png" sizes="72x72" href="../../../favicons/android-chrome-72x72.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../../../favicons/android-chrome-96x96.png">
+        <link rel="icon" type="image/png" sizes="128x128" href="../../../favicons/android-chrome-128x128.png">
+        <link rel="icon" type="image/png" sizes="144x144" href="../../../favicons/android-chrome-144x144.png">
+        <link rel="icon" type="image/png" sizes="152x152" href="../../../favicons/android-chrome-152x152.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="../../../favicons/android-chrome-192x192.png">
+        <link rel="icon" type="image/png" sizes="256x256" href="../../../favicons/android-chrome-256x256.png">
+        <link rel="icon" type="image/png" sizes="384x384" href="../../../favicons/android-chrome-384x384.png">
+        <link rel="icon" type="image/png" sizes="512x512" href="../../../favicons/android-chrome-512x512.png">
+        <link rel="icon" type="image/png" sizes="36x36" href="../../../favicons/icon-36x36.png">
+        <link rel="icon" type="image/png" sizes="48x48" href="../../../favicons/icon-48x48.png">
+        <link rel="icon" type="image/png" sizes="72x72" href="../../../favicons/icon-72x72.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../../../favicons/icon-96x96.png">
+        <link rel="icon" type="image/png" sizes="128x128" href="../../../favicons/icon-128x128.png">
+        <link rel="icon" type="image/png" sizes="144x144" href="../../../favicons/icon-144x144.png">
+        <link rel="icon" type="image/png" sizes="152x152" href="../../../favicons/icon-152x152.png">
+        <link rel="icon" type="image/png" sizes="160x160" href="../../../favicons/icon-160x160.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="../../../favicons/icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="196x196" href="../../../favicons/icon-196x196.png">
+        <link rel="icon" type="image/png" sizes="256x256" href="../../../favicons/icon-256x256.png">
+        <link rel="icon" type="image/png" sizes="384x384" href="../../../favicons/icon-384x384.png">
+        <link rel="icon" type="image/png" sizes="512x512" href="../../../favicons/icon-512x512.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../favicons/icon-16x16.png">
+        <link rel="icon" type="image/png" sizes="24x24" href="../../../favicons/icon-24x24.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../favicons/icon-32x32.png">
+        <link rel="manifest" href="../../../favicons/manifest.json">
         <meta name="google-site-verification" content="sH_aP0y8KDs49AEPgsssCCx6_ajKdyX1zS-gOBqLZeQ" />
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-T5DMN2Z25W"></script>
@@ -65,7 +65,7 @@
     <body style="scroll-padding-top: 70px;">
             <header class="navbar has-background-primary-dark is-fixed-top" role="navigation" aria-label="main navigation">
                 <div class="navbar-brand">
-                    <a class="navbar-item" href="../../">
+                    <a class="navbar-item" href="../../../">
                         <span class="title is-1">
                             S6T4
                         </span>
@@ -79,8 +79,8 @@
                 </div>
                 <div id="mainnav" class="navbar-menu has-background-primary-dark">
                     <div class="navbar-start"> 
-                        <a class="navbar-item is-size-4 has-text-info" href="../../">Home</a>
-                        <a class="navbar-item is-size-4 has-text-info" href="../../archive.html">Archive</a>
+                        <a class="navbar-item is-size-4 has-text-info" href="../../../">Home</a>
+                        <a class="navbar-item is-size-4 has-text-info" href="../../../archive">Archive</a>
                     </div>
                 </div>
             </header>
@@ -93,11 +93,11 @@
                     </th>
                     
                         <td>
-                            <a class="button is-link" href="../../en/posts/2024-05-28-inter-link-routing-hakyll.html">en</a>
+                            <a class="button is-link" href="../../../en/posts/2024-05-28-inter-link-routing-hakyll/">en</a>
                         </td>
                     
                         <td>
-                            <a class="button is-link" href="../../jp/posts/2024-05-28-inter-link-routing-hakyll.html">jp</a>
+                            <a class="button is-link" href="../../../jp/posts/2024-05-28-inter-link-routing-hakyll/">jp</a>
                         </td>
                     
                 </tbody>
@@ -106,7 +106,7 @@
         
         <main class="container is-fluid mt-5">
             <div class="content">
-                <h2>HakyllでRouteを変更した上で内部リンクを使う</h2>
+                <h2>to use inter link in md with modified Route by Hakyll</h2>
                 <div class="container my-5">
     <table class="table">
         <thead>
@@ -149,14 +149,14 @@
 
 </div>
 <article class="container">
-    <p>Hakyll で Route を変更して markdown を pandoc compiler を通してもリンク先は自動で更新されない。</p>
-<p>このため、markdown 内の link を手動で書き替えてやる必要がある</p>
-<p>Hakyll で定義されている <code>withUrls</code>を使用すると<code>String-&gt;String</code>の変換を
-各種 URL に適用することができる。これを使用して変更したい URL のみ上書きする。</p>
-<p>実装を用いて説明する。</p>
+    <p>links in output html are not updated automatically via Hakyll’s pandoc compiler with modified route.</p>
+<p>For this reason, it is necessary to manually rewrite the link in markdown.</p>
+<p><code>withUrls</code> is a function in Hakyll can apply <code>String-&gt;String</code> convert in each URLs.</p>
+<p>so it can be used to create a specific parser.</p>
+<p>below is usage example.</p>
 <ul>
-<li><code>parseInnerLinks</code>: <code>parseInnerLink</code> を <code>withUrls</code> ですべての URL に対して適用する</li>
-<li><code>parseInnerLink</code>: <code>/posts</code>の接頭辞の url のみ <code>parsePostLink</code> を適用する</li>
+<li><code>parseInnerLinks</code>: apply <code>parseInnerLink</code> each URLs by <code>withUrls</code>.</li>
+<li><code>parseInnerLink</code>: apply <code>parsePostLink</code> only URL has prefix <code>/posts</code></li>
 </ul>
 <div class="sourceCode" id="cb1"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ot">parseInnerLinks ::</span> <span class="dt">Item</span> <span class="dt">String</span> <span class="ot">-&gt;</span> <span class="dt">Compiler</span> (<span class="dt">Item</span> <span class="dt">String</span>)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>parseInnerLinks <span class="ot">=</span> <span class="fu">pure</span> <span class="op">.</span> <span class="fu">fmap</span> (withUrls parseInnerLink)</span>
@@ -169,10 +169,10 @@
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="op">|</span> <span class="fu">otherwise</span> <span class="ot">=</span></span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>        url</span></code></pre></div>
 <ul>
-<li><code>parsePostLink</code>: <code>#</code>を含んでいる(特定のセクションへのリンク)を考慮した処理。
-<code>#</code>以前の URL を変換し<code>#</code>以後を再結合する</li>
-<li><code>convPostUrl</code>: <code>Route</code>の変更に使用した<code>String-&gt;String</code>の変換を再利用する。
-<code>Identifier</code>を取得する際、先頭の<code>/</code>が邪魔になるため<code>tail</code>で除去している。</li>
+<li><code>parsePostLink</code>: it convert URL which include <code>#</code> (section link).
+convert URL before <code>#</code> and re-concat URL after <code>#</code>.</li>
+<li><code>convPostUrl</code>: apply <code>String-&gt;String</code> convert in same as used <code>Route</code>
+delete <code>/</code> which head of URL by <code>tail</code> to get <code>Filepath</code>.</li>
 </ul>
 <div class="sourceCode" id="cb2"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ot">parsePostLink ::</span> <span class="dt">String</span> <span class="ot">-&gt;</span> <span class="dt">String</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>parsePostLink url <span class="ot">=</span> <span class="kw">case</span> <span class="fu">map</span> T.unpack <span class="op">.</span> T.splitOn <span class="st">&quot;#&quot;</span> <span class="op">$</span> T.pack url <span class="kw">of</span></span>
@@ -184,7 +184,7 @@
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="ot">addHtml ::</span> <span class="dt">String</span> <span class="ot">-&gt;</span> <span class="dt">String</span></span>
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>addHtml <span class="ot">=</span> (<span class="op">++</span> <span class="st">&quot;.html&quot;</span>)</span></code></pre></div>
-<p>定義した<code>parseInnerLinks</code>は次にように使用することができる。</p>
+<p>below is example of usage <code>parseInnerLinks</code>.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>pandocCompiler</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;=</span> loadAndApplyTemplate <span class="st">&quot;templates/post.html&quot;</span> postCtx</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;=</span> loadAndApplyTemplate <span class="st">&quot;templates/default.html&quot;</span> postCtx</span>
@@ -198,7 +198,7 @@
     </div>
     <div class="card-content">
         <div class="content">
-            役立ったら下のリンクから支援をもらえると嬉しい
+            If this post helps you, I'd be glad to get your support via the link below.
         </div>
         <a href="https://paypal.me/s6tanaka">
     <img alt="paypal.me Badge" src="https://img.shields.io/badge/paypal.me-s6tanaka-white?style=flat-squere:badgeContent&logo=paypal">
@@ -212,9 +212,9 @@
 <div id="disqus_thread"></div>
 <script>
     var disqus_config = function () {
-//    this.page.url = "/jp/posts/2024-05-28-inter-link-routing-hakyll.html";
+//    this.page.url = "/en/posts/2024-05-28-inter-link-routing-hakyll/";
 //    this.page.identifier = PAGE_IDENTIFIER;
-    this.language = "jp";
+    this.language = "en";
     };
     
     (function() { // DON'T EDIT BELOW THIS LINE
@@ -233,7 +233,7 @@
         <footer class="footer">
             <div class="content has-text-centered">
                 
-                    <a href="../../">
+                    <a href="../../../">
                 
                     back to home
                 </a>
