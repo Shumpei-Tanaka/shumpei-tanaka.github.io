@@ -3,6 +3,32 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
     <url>
+        <loc>https://shumpei-tanaka.github.io/ja/posts/2024-07-04-failed-petalinux-package-wic/</loc>
+        <changefreq>monthly</changefreq>
+        <lastmod>2024-07-04</lastmod>
+            
+        
+             <xhtml:link rel="alternate" hreflang="en" href="https://shumpei-tanaka.github.io/en/posts/2024-07-04-failed-petalinux-package-wic/" />
+             <xhtml:link rel="alternate" hreflang="ja" href="https://shumpei-tanaka.github.io/ja/posts/2024-07-04-failed-petalinux-package-wic/" />
+            
+        
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://shumpei-tanaka.github.io/en/posts/2024-07-04-failed-petalinux-package-wic/</loc>
+        <changefreq>monthly</changefreq>
+        <lastmod>2024-07-04</lastmod>
+            
+        
+             <xhtml:link rel="alternate" hreflang="en" href="https://shumpei-tanaka.github.io/en/posts/2024-07-04-failed-petalinux-package-wic/" />
+             <xhtml:link rel="alternate" hreflang="ja" href="https://shumpei-tanaka.github.io/ja/posts/2024-07-04-failed-petalinux-package-wic/" />
+            
+        
+        <priority>0.8</priority>
+    </url>
+
+    <url>
         <loc>https://shumpei-tanaka.github.io/ja/posts/2024-05-28-multi-lang-site-with-hakyll/</loc>
         <changefreq>monthly</changefreq>
         <lastmod>2024-05-28</lastmod>
