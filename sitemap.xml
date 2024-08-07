@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <url>
         <loc>https://shumpei-tanaka.github.io/ja/posts/2024-07-04-failed-petalinux-package-wic/</loc>
         <changefreq>monthly</changefreq>
         <lastmod>2024-07-04</lastmod>
             
-        
-             <xhtml:link rel="alternate" hreflang="en" href="https://shumpei-tanaka.github.io/en/posts/2024-07-04-failed-petalinux-package-wic/" />
-             <xhtml:link rel="alternate" hreflang="ja" href="https://shumpei-tanaka.github.io/ja/posts/2024-07-04-failed-petalinux-package-wic/" />
-            
-        
         <priority>0.8</priority>
     </url>
 
@@ -20,11 +14,6 @@
         <changefreq>monthly</changefreq>
         <lastmod>2024-07-04</lastmod>
             
-        
-             <xhtml:link rel="alternate" hreflang="en" href="https://shumpei-tanaka.github.io/en/posts/2024-07-04-failed-petalinux-package-wic/" />
-             <xhtml:link rel="alternate" hreflang="ja" href="https://shumpei-tanaka.github.io/ja/posts/2024-07-04-failed-petalinux-package-wic/" />
-            
-        
         <priority>0.8</priority>
     </url>
 
@@ -33,11 +22,6 @@
         <changefreq>monthly</changefreq>
         <lastmod>2024-05-28</lastmod>
             
-        
-             <xhtml:link rel="alternate" hreflang="en" href="https://shumpei-tanaka.github.io/en/posts/2024-05-28-multi-lang-site-with-hakyll/" />
-             <xhtml:link rel="alternate" hreflang="ja" href="https://shumpei-tanaka.github.io/ja/posts/2024-05-28-multi-lang-site-with-hakyll/" />
-            
-        
         <priority>0.8</priority>
     </url>
 
@@ -46,11 +30,6 @@
         <changefreq>monthly</changefreq>
         <lastmod>2024-05-28</lastmod>
             
-        
-             <xhtml:link rel="alternate" hreflang="en" href="https://shumpei-tanaka.github.io/en/posts/2024-05-28-inter-link-routing-hakyll/" />
-             <xhtml:link rel="alternate" hreflang="ja" href="https://shumpei-tanaka.github.io/ja/posts/2024-05-28-inter-link-routing-hakyll/" />
-            
-        
         <priority>0.8</priority>
     </url>
 
@@ -59,11 +38,6 @@
         <changefreq>monthly</changefreq>
         <lastmod>2024-05-28</lastmod>
             
-        
-             <xhtml:link rel="alternate" hreflang="en" href="https://shumpei-tanaka.github.io/en/posts/2024-05-28-inter-link-routing-hakyll/" />
-             <xhtml:link rel="alternate" hreflang="ja" href="https://shumpei-tanaka.github.io/ja/posts/2024-05-28-inter-link-routing-hakyll/" />
-            
-        
         <priority>0.8</priority>
     </url>
 
@@ -72,11 +46,6 @@
         <changefreq>monthly</changefreq>
         <lastmod>2024-05-28</lastmod>
             
-        
-             <xhtml:link rel="alternate" hreflang="en" href="https://shumpei-tanaka.github.io/en/posts/2024-05-28-multi-lang-site-with-hakyll/" />
-             <xhtml:link rel="alternate" hreflang="ja" href="https://shumpei-tanaka.github.io/ja/posts/2024-05-28-multi-lang-site-with-hakyll/" />
-            
-        
         <priority>0.8</priority>
     </url>
 
@@ -84,11 +53,6 @@
         <loc>https://shumpei-tanaka.github.io/</loc>
         <changefreq>monthly</changefreq>
         
-        
-        
-             <xhtml:link rel="alternate" hreflang="en" href="https://shumpei-tanaka.github.io/" />
-             <xhtml:link rel="alternate" hreflang="ja" href="https://shumpei-tanaka.github.io/ja/" />
-            
         
         <priority>0.8</priority>
     </url>
@@ -98,11 +62,6 @@
         <changefreq>monthly</changefreq>
         
         
-        
-             <xhtml:link rel="alternate" hreflang="en" href="https://shumpei-tanaka.github.io/" />
-             <xhtml:link rel="alternate" hreflang="ja" href="https://shumpei-tanaka.github.io/ja/" />
-            
-        
         <priority>0.8</priority>
     </url>
 
@@ -110,10 +69,6 @@
         <loc>https://shumpei-tanaka.github.io/archive/</loc>
         <changefreq>monthly</changefreq>
         
-        
-        
-             <xhtml:link rel="alternate" hreflang="en" href="https://shumpei-tanaka.github.io/archive/" />
-            
         
         <priority>0.8</priority>
     </url>
