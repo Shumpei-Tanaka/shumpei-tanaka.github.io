@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
+        <loc>https://shumpei-tanaka.github.io/ja/posts/2024-11-23-asciidoc-page-border-in-margin/</loc>
+        <changefreq>monthly</changefreq>
+        <lastmod>2024-11-23</lastmod> 
+        <xhtml:link rel="alternate" hreflang="en" href="https://shumpei-tanaka.github.io/en/posts/2024-11-23-asciidoc-page-border-in-margin/"/> 
+        <xhtml:link rel="alternate" hreflang="ja" href="https://shumpei-tanaka.github.io/ja/posts/2024-11-23-asciidoc-page-border-in-margin/"/>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://shumpei-tanaka.github.io/en/posts/2024-11-23-asciidoc-page-border-in-margin/</loc>
+        <changefreq>monthly</changefreq>
+        <lastmod>2024-11-23</lastmod> 
+        <xhtml:link rel="alternate" hreflang="en" href="https://shumpei-tanaka.github.io/en/posts/2024-11-23-asciidoc-page-border-in-margin/"/> 
+        <xhtml:link rel="alternate" hreflang="ja" href="https://shumpei-tanaka.github.io/ja/posts/2024-11-23-asciidoc-page-border-in-margin/"/>
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>https://shumpei-tanaka.github.io/ja/posts/2024-07-04-failed-petalinux-package-wic/</loc>
         <changefreq>monthly</changefreq>
         <lastmod>2024-07-04</lastmod> 

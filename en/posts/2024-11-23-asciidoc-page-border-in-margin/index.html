@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en" class="has-navbar-fixed-top" style="scroll-padding-top: 70px;" data-theme="dark">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>S6T5 - How to write page border with AsciiDoctor</title>
+        <link rel="stylesheet" href="../../../css/bulma.css" />
+        <link rel="stylesheet" href="../../../css/syntax.css" />
+        <script src="../../../js/default.js"></script>
+        <meta name="msapplication-square70x70logo" content="/favicons/site-tile-70x70.png">
+        <meta name="msapplication-square150x150logo" content="/favicons/site-tile-150x150.png">
+        <meta name="msapplication-wide310x150logo" content="/favicons/site-tile-310x150.png">
+        <meta name="msapplication-square310x310logo" content="/favicons/site-tile-310x310.png">
+        <meta name="msapplication-TileColor" content="#0078d7">
+        <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="../../../favicons/favicon.ico">
+        <link rel="icon" type="image/vnd.microsoft.icon" href="../../../favicons/favicon.ico">
+        <link rel="apple-touch-icon" sizes="57x57" href="../../../favicons/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="../../../favicons/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="../../../favicons/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="../../../favicons/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="../../../favicons/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="../../../favicons/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="../../../favicons/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="../../../favicons/apple-touch-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../favicons/apple-touch-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="36x36" href="../../../favicons/android-chrome-36x36.png">
+        <link rel="icon" type="image/png" sizes="48x48" href="../../../favicons/android-chrome-48x48.png">
+        <link rel="icon" type="image/png" sizes="72x72" href="../../../favicons/android-chrome-72x72.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../../../favicons/android-chrome-96x96.png">
+        <link rel="icon" type="image/png" sizes="128x128" href="../../../favicons/android-chrome-128x128.png">
+        <link rel="icon" type="image/png" sizes="144x144" href="../../../favicons/android-chrome-144x144.png">
+        <link rel="icon" type="image/png" sizes="152x152" href="../../../favicons/android-chrome-152x152.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="../../../favicons/android-chrome-192x192.png">
+        <link rel="icon" type="image/png" sizes="256x256" href="../../../favicons/android-chrome-256x256.png">
+        <link rel="icon" type="image/png" sizes="384x384" href="../../../favicons/android-chrome-384x384.png">
+        <link rel="icon" type="image/png" sizes="512x512" href="../../../favicons/android-chrome-512x512.png">
+        <link rel="icon" type="image/png" sizes="36x36" href="../../../favicons/icon-36x36.png">
+        <link rel="icon" type="image/png" sizes="48x48" href="../../../favicons/icon-48x48.png">
+        <link rel="icon" type="image/png" sizes="72x72" href="../../../favicons/icon-72x72.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../../../favicons/icon-96x96.png">
+        <link rel="icon" type="image/png" sizes="128x128" href="../../../favicons/icon-128x128.png">
+        <link rel="icon" type="image/png" sizes="144x144" href="../../../favicons/icon-144x144.png">
+        <link rel="icon" type="image/png" sizes="152x152" href="../../../favicons/icon-152x152.png">
+        <link rel="icon" type="image/png" sizes="160x160" href="../../../favicons/icon-160x160.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="../../../favicons/icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="196x196" href="../../../favicons/icon-196x196.png">
+        <link rel="icon" type="image/png" sizes="256x256" href="../../../favicons/icon-256x256.png">
+        <link rel="icon" type="image/png" sizes="384x384" href="../../../favicons/icon-384x384.png">
+        <link rel="icon" type="image/png" sizes="512x512" href="../../../favicons/icon-512x512.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../favicons/icon-16x16.png">
+        <link rel="icon" type="image/png" sizes="24x24" href="../../../favicons/icon-24x24.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../favicons/icon-32x32.png">
+        <link rel="manifest" href="../../../favicons/manifest.json">
+        <meta name="google-site-verification" content="sH_aP0y8KDs49AEPgsssCCx6_ajKdyX1zS-gOBqLZeQ" />
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-T5DMN2Z25W"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-T5DMN2Z25W');
+        </script>
+    </head>
+    <body style="scroll-padding-top: 70px;">
+            <header class="navbar has-background-primary-dark is-fixed-top" role="navigation" aria-label="main navigation">
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="../../../">
+                        <span class="title is-1">
+                            S6T5
+                        </span>
+                    </a>
+                    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="mainnav">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+                <div id="mainnav" class="navbar-menu has-background-primary-dark">
+                    <div class="navbar-start"> 
+                        <a class="navbar-item is-size-4 has-text-info" href="../../../">Home</a>
+                        <a class="navbar-item is-size-4 has-text-info" href="../../../archive">Archive</a>
+                    </div>
+                </div>
+            </header>
+        
+        <div class="mt-4" align="right">
+            <table class="table has-background-info-dark">
+                <tbody>
+                    <th class="is-vcentered is-centered">
+                        lang
+                    </th>
+                    
+                        <td>
+                            <a class="button is-link" href="../../../en/posts/2024-11-23-asciidoc-page-border-in-margin/">en</a>
+                        </td>
+                    
+                        <td>
+                            <a class="button is-link" href="../../../ja/posts/2024-11-23-asciidoc-page-border-in-margin/">ja</a>
+                        </td>
+                    
+                </tbody>
+            </table>
+        </div>
+        
+        <main class="container is-fluid mt-5">
+            <div class="content">
+                <h2>How to write page border with AsciiDoctor</h2>
+                <div class="container my-5">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Published
+                </th>
+                <th>
+                    Last Update 
+                </th>
+                
+                    <th>
+                        author
+                    </th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    2024/11/23
+                </td>  
+                <td>
+                    
+                    2024/11/23
+                    
+                </td>
+                
+                    <td>
+                        Shumpei Tanaka
+                    </td>
+                
+            </tr>
+        </tbody>
+    </table>
+
+    
+
+    
+
+</div>
+<article class="container">
+    <p>I introduce how to write page border with <code>AsciiDoctor</code>.</p>
+<p>There is a feature: <code>Page Border</code> and <code>Surround header</code> in Word of Microsoft’s Office.</p>
+<p>How to set <code>Page Border</code> in Word is below.</p>
+<ul>
+<li>Open <code>Design</code> → <code>PageBorders</code></li>
+<li>Push <code>Box</code></li>
+<li>Push <code>OK</code></li>
+</ul>
+<figure>
+<img src="../../../images/2024-11-11-asciidoc-page-border-in-margin-en-image-1.png" alt="setting page border in Word" />
+<figcaption aria-hidden="true">setting page border in Word</figcaption>
+</figure>
+<p>Result is below.</p>
+<figure>
+<img src="../../../images/2024-11-11-asciidoc-page-border-in-margin-en-image-1-1.png" alt="result of page border in Word" />
+<figcaption aria-hidden="true">result of page border in Word</figcaption>
+</figure>
+<p>How to set <code>Page Border</code> in Word is below.</p>
+<ul>
+<li>Open <code>Design</code> → <code>PageBorders</code></li>
+<li>Open <code>Options...</code></li>
+<li>Set <code>Measure from</code> to <code>Text</code></li>
+<li>Check <code>Surround header</code></li>
+</ul>
+<figure>
+<img src="../../../images/2024-11-11-asciidoc-page-border-in-margin-en-image-2.png" alt="setting page border and surround header in Word" />
+<figcaption aria-hidden="true">setting page border and surround header in Word</figcaption>
+</figure>
+<p>Result is below.</p>
+<figure>
+<img src="../../../images/2024-11-11-asciidoc-page-border-in-margin-en-image-3.png" alt="result of page border and surround header in Word" />
+<figcaption aria-hidden="true">result of page border and surround header in Word</figcaption>
+</figure>
+<p>This converter was made for substitution of their.</p>
+<p>Result looks like below.</p>
+<figure>
+<img src="../../../images/2024-11-11-asciidoc-page-border-in-margin-jp-image-4.png" alt="script results" />
+<figcaption aria-hidden="true">script results</figcaption>
+</figure>
+<p>There is usage in <a href="https://github.com/Shumpei-Tanaka/asciidoc-borderinmargin">repository: Shumpei-Tanaka/AsciiDoc-BorderInMargin</a> .</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">class</span> <span class="dt">PDFConverterCustomTitlePage</span> <span class="kw">&lt;</span> (<span class="dt">Asciidoctor</span><span class="kw">::</span><span class="dt">Converter</span><span class="at">.for</span> <span class="vs">'pdf'</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  register_for <span class="vs">'pdf'</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">def</span> ink_title_page(doc)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="dv">super</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    write_mergin_border <span class="wa">line_offset: </span><span class="dv">5</span>, <span class="wa">line_width: </span><span class="dv">1</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    write_header_border <span class="wa">line_offset: </span><span class="dv">5</span>, <span class="wa">line_width: </span><span class="dv">1</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="cf">end</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="cf">def</span> ink_running_content(<span class="kw">*</span>)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    write_mergin_border <span class="wa">line_offset: </span><span class="dv">5</span>, <span class="wa">line_width: </span><span class="dv">1</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    write_header_border <span class="wa">line_offset: </span><span class="dv">5</span>, <span class="wa">line_width: </span><span class="dv">1</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="dv">super</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="cf">end</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="cf">end</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="cf">def</span> write_header_border(line_offset:, line_width:)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  _m_t, m_r, m_b, m_l <span class="kw">=</span> page_margin</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  header_height <span class="kw">=</span> theme<span class="at">.header_height</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  header_columns <span class="kw">=</span> theme<span class="at">.header_columns</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  mh_t, mh_r, _mh_b, mh_l <span class="kw">=</span> theme<span class="at">.header_margin</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  columns <span class="kw">=</span> header_columns<span class="at">.delete</span>(<span class="vs">'^0-9,.'</span>)<span class="at">.split</span>(<span class="ch">','</span>)<span class="at">.map</span>(<span class="kw">&amp;</span><span class="wa">:to_f</span>)</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>  o_sum <span class="kw">=</span> columns<span class="at">.sum</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>  sum <span class="kw">=</span> <span class="dv">0</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>  ps <span class="kw">=</span> <span class="kw">[]</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>  columns<span class="at">.pop</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>  columns<span class="at">.each</span> <span class="cf">do</span> <span class="kw">|</span>col<span class="kw">|</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>    sum <span class="kw">+=</span> col</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>    ps <span class="kw">&lt;&lt;</span> sum</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>  <span class="cf">end</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>  ps <span class="kw">=</span> ps<span class="at">.map</span> <span class="kw">{</span> <span class="kw">|</span>col<span class="kw">|</span> col <span class="kw">/</span> o_sum <span class="kw">}</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>  p_t <span class="kw">=</span> <span class="kw">-</span>(page_height <span class="kw">-</span> (mh_t <span class="kw">-</span> line_offset) <span class="kw">-</span> m_b)</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>  p_b <span class="kw">=</span> <span class="kw">-</span>(page_height <span class="kw">-</span> (mh_t <span class="kw">+</span> line_offset) <span class="kw">-</span> m_b <span class="kw">-</span> header_height)</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>  p_l <span class="kw">=</span> <span class="kw">-</span>line_offset</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>  p_r <span class="kw">=</span> page_width <span class="kw">-</span> (m_r <span class="kw">-</span> line_offset) <span class="kw">-</span> m_l</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>  t_width <span class="kw">=</span> page_width <span class="kw">-</span> mh_r <span class="kw">-</span> mh_l</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>  p_vs <span class="kw">=</span> ps<span class="at">.map</span> <span class="cf">do</span> <span class="kw">|</span>i<span class="kw">|</span></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>    t_width <span class="kw">*</span> i <span class="kw">-</span> m_l <span class="kw">+</span> mh_l</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>  <span class="cf">end</span></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>  move_cursor_to <span class="dv">0</span></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>  stroke_horizontal_rule <span class="vs">'000000'</span>, <span class="wa">line_width: </span>line_width, <span class="wa">at: </span>p_t, <span class="wa">left_projection: </span>line_offset,</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>                                   <span class="wa">right_projection: </span><span class="kw">-</span>line_offset</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>  stroke_horizontal_rule <span class="vs">'000000'</span>, <span class="wa">line_width: </span>line_width, <span class="wa">at: </span>p_b, <span class="wa">left_projection: </span>line_offset,</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>                                   <span class="wa">right_projection: </span><span class="kw">-</span>line_offset</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>  p_vs<span class="at">.each</span> <span class="cf">do</span> <span class="kw">|</span>p_v<span class="kw">|</span></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>    stroke_vertical_line(<span class="kw">-</span>p_b, <span class="kw">-</span>p_t, <span class="wa">at: </span>p_v)</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>  <span class="cf">end</span></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>  stroke_vertical_line(<span class="kw">-</span>p_b, <span class="kw">-</span>p_t, <span class="wa">at: </span>p_l)</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>  stroke_vertical_line(<span class="kw">-</span>p_b, <span class="kw">-</span>p_t, <span class="wa">at: </span>p_r)</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="cf">end</span></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a><span class="cf">def</span> write_mergin_border(line_offset:, line_width:)</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>  m_t, m_r, m_b, m_l <span class="kw">=</span> page_margin</span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>  p_t <span class="kw">=</span> <span class="kw">-</span>(page_height <span class="kw">-</span> (m_t <span class="kw">-</span> line_offset) <span class="kw">-</span> m_b)</span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>  p_b <span class="kw">=</span> line_offset</span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>  p_l <span class="kw">=</span> <span class="kw">-</span>line_offset</span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>  p_r <span class="kw">=</span> page_width <span class="kw">-</span> (m_r <span class="kw">-</span> line_offset) <span class="kw">-</span> m_l</span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>  move_cursor_to <span class="dv">0</span></span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a>  stroke_horizontal_rule <span class="vs">'000000'</span>, <span class="wa">line_width: </span>line_width, <span class="wa">at: </span>p_t, <span class="wa">left_projection: </span>line_offset,</span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a>                                   <span class="wa">right_projection: </span><span class="kw">-</span>line_offset</span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>  stroke_horizontal_rule <span class="vs">'000000'</span>, <span class="wa">line_width: </span>line_width, <span class="wa">at: </span>p_b, <span class="wa">left_projection: </span>line_offset,</span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a>                                   <span class="wa">right_projection: </span><span class="kw">-</span>line_offset</span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a>  stroke_vertical_rule <span class="vs">'000000'</span>, <span class="wa">line_width: </span>line_width, <span class="wa">at: </span>p_l, <span class="wa">top_projection: </span>line_offset,</span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a>                                 <span class="wa">bottom_projection: </span>line_offset</span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>  stroke_vertical_rule <span class="vs">'000000'</span>, <span class="wa">line_width: </span>line_width, <span class="wa">at: </span>p_r, <span class="wa">top_projection: </span>line_offset,</span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>                                 <span class="wa">bottom_projection: </span>line_offset</span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a><span class="cf">end</span></span></code></pre></div>
+</article>
+
+<div class="card mt-5">
+    <div class="card-header">
+        <p class="card-header-title title is-4">Say thank you</p>
+    </div>
+    <div class="card-content">
+        <div class="content">
+            If this post helps you, I'd be glad to get your support via the link below.
+        </div>
+        <a href="https://paypal.me/s6tanaka">
+    <img alt="paypal.me Badge" src="https://img.shields.io/badge/paypal.me-s6tanaka-white?style=flat-squere:badgeContent&logo=paypal">
+</a>
+<a href="https://www.buymeacoffee.com/s6tanaka">
+    <img alt="paypal.me Badge" src="https://img.shields.io/badge/buy_me_a_coffee-s6tanaka-white?style=flat-squere:badgeContent&logo=buymeacoffee&logocolor=#FFDD00">
+</a>
+    </div>
+</div>
+
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+//    this.page.url = "/en/posts/2024-11-23-asciidoc-page-border-in-margin/";
+//    this.page.identifier = PAGE_IDENTIFIER;
+    this.language = "en";
+    };
+    
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://s6t4.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="content has-text-centered">
+                
+                    <a href="../../../">
+                
+                    back to home
+                </a>
+                <p>
+                    Site proudly generated by
+                    <a href="http://jaspervdj.be/hakyll">Hakyll</a>
+                    ,
+                    <a href="https://bulma.io/">Bulma</a>
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>
