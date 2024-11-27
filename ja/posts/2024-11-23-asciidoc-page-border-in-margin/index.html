@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>S6T5 - AsciiDoctor で 余白にページ罫線を書く方法</title>
+        <title>S6T5 - Asciidoctor で 余白にページ罫線を書く方法</title>
         <link rel="stylesheet" href="../../../css/bulma.css" />
         <link rel="stylesheet" href="../../../css/syntax.css" />
         <script src="../../../js/default.js"></script>
@@ -106,7 +106,7 @@
         
         <main class="container is-fluid mt-5">
             <div class="content">
-                <h2>AsciiDoctor で 余白にページ罫線を書く方法</h2>
+                <h2>Asciidoctor で 余白にページ罫線を書く方法</h2>
                 <div class="container my-5">
     <table class="table">
         <thead>
@@ -131,7 +131,7 @@
                 </td>  
                 <td>
                     
-                    2024/11/23
+                    2024/11/26
                     
                 </td>
                 
@@ -149,46 +149,28 @@
 
 </div>
 <article class="container">
-    <p><code>AsciiDoctor</code> でページ罫線を余白に書く方法について書く。</p>
+    <h2 id="概要"><a href="#概要" class="headerLink" title="概要">概要</a></h2>
+<p><code>Asciidoctor</code> でページ罫線を余白に書く方法について書く。</p>
 <p>Microsoft’s Office の Word には <code>ページ罫線</code> と <code>ヘッダーを囲む</code> の機能がある。</p>
-<p><code>ページ罫線</code> は次のように設定できる</p>
-<ul>
-<li>開く: <code>デザイン</code> → <code>ページ罫線</code></li>
-<li>押す: <code>囲む(X)</code></li>
-<li>押す: <code>OK</code></li>
-</ul>
-<figure>
-<img src="../../../images/2024-11-11-asciidoc-page-border-in-margin-jp-image.png" alt="setting page border in Word" />
-<figcaption aria-hidden="true">setting page border in Word</figcaption>
-</figure>
-<p>設定すると次のようになる。</p>
-<figure>
-<img src="../../../images/2024-11-11-asciidoc-page-border-in-margin-jp-image-1.png" alt="result of page border in Word" />
-<figcaption aria-hidden="true">result of page border in Word</figcaption>
-</figure>
-<p><code>ヘッダーを囲む</code> は次のように設定する。</p>
-<ul>
-<li>開く: <code>デザイン</code> → <code>ページ罫線</code></li>
-<li>開く: <code>オプション</code></li>
-<li><code>基準</code> を <code>本文</code> に設定する</li>
-<li>チェックを入れる: <code>ヘッダーを囲む</code></li>
-</ul>
-<figure>
-<img src="../../../images/2024-11-11-asciidoc-page-border-in-margin-jp-image-2.png" alt="setting page border and surround header in Word" />
-<figcaption aria-hidden="true">setting page border and surround header in Word</figcaption>
-</figure>
-<p>設定すると次のようになる。</p>
-<figure>
-<img src="../../../images/2024-11-11-asciidoc-page-border-in-margin-jp-image-3.png" alt="result of page border and surround header in Word" />
-<figcaption aria-hidden="true">result of page border and surround header in Word</figcaption>
-</figure>
 <p>この機能を代替するためのスクリプトを書いた。</p>
+<h2 id="デモ"><a href="#デモ" class="headerLink" title="デモ">デモ</a></h2>
 <p>結果は次のようになる。</p>
 <figure>
 <img src="../../../images/2024-11-11-asciidoc-page-border-in-margin-jp-image-4.png" alt="script results" />
 <figcaption aria-hidden="true">script results</figcaption>
 </figure>
+<h2 id="使用方法"><a href="#使用方法" class="headerLink" title="使用方法">使用方法</a></h2>
 <p>このスクリプトの使用方法は <a href="https://github.com/Shumpei-Tanaka/asciidoc-borderinmargin">リポジトリ: Shumpei-Tanaka/AsciiDoc-BorderInMargin</a> を参照。</p>
+<h2 id="スクリプト"><a href="#スクリプト" class="headerLink" title="スクリプト">スクリプト</a></h2>
+<p>最新版は <a href="https://github.com/Shumpei-Tanaka/asciidoc-borderinmargin">リポジトリ: Shumpei-Tanaka/AsciiDoc-BorderInMargin</a> を参照。</p>
+<p><code>write_header_border</code> はヘッダー周辺を書く関数。
+<code>Asciidoctor</code> のスタイル設定から以下の値を使用して囲む範囲を計算する。</p>
+<ul>
+<li>header margin</li>
+<li>herder column ratios</li>
+</ul>
+<p><code>write_mergin_border</code> はページ全体の境界を余白に書く関数。
+margi の値はスタイル設定から引っ張っている。</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">class</span> <span class="dt">PDFConverterCustomTitlePage</span> <span class="kw">&lt;</span> (<span class="dt">Asciidoctor</span><span class="kw">::</span><span class="dt">Converter</span><span class="at">.for</span> <span class="vs">'pdf'</span>)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  register_for <span class="vs">'pdf'</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">def</span> ink_title_page(doc)</span>
@@ -263,6 +245,39 @@
 <span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>  stroke_vertical_rule <span class="vs">'000000'</span>, <span class="wa">line_width: </span>line_width, <span class="wa">at: </span>p_r, <span class="wa">top_projection: </span>line_offset,</span>
 <span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>                                 <span class="wa">bottom_projection: </span>line_offset</span>
 <span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a><span class="cf">end</span></span></code></pre></div>
+<h2 id="付録"><a href="#付録" class="headerLink" title="付録">付録</a></h2>
+<p>Microsoft’s Office の Word で <code>ページ罫線</code> と <code>ヘッダーを囲む</code> を設定する方法。</p>
+<p><code>ページ罫線</code> は次のように設定できる</p>
+<ul>
+<li>開く: <code>デザイン</code> → <code>ページ罫線</code></li>
+<li>押す: <code>囲む(X)</code></li>
+<li>押す: <code>OK</code></li>
+</ul>
+<figure>
+<img src="../../../images/2024-11-11-asciidoc-page-border-in-margin-jp-image.png" alt="setting page border in Word" />
+<figcaption aria-hidden="true">setting page border in Word</figcaption>
+</figure>
+<p>設定すると次のようになる。</p>
+<figure>
+<img src="../../../images/2024-11-11-asciidoc-page-border-in-margin-jp-image-1.png" alt="result of page border in Word" />
+<figcaption aria-hidden="true">result of page border in Word</figcaption>
+</figure>
+<p><code>ヘッダーを囲む</code> は次のように設定する。</p>
+<ul>
+<li>開く: <code>デザイン</code> → <code>ページ罫線</code></li>
+<li>開く: <code>オプション</code></li>
+<li><code>基準</code> を <code>本文</code> に設定する</li>
+<li>チェックを入れる: <code>ヘッダーを囲む</code></li>
+</ul>
+<figure>
+<img src="../../../images/2024-11-11-asciidoc-page-border-in-margin-jp-image-2.png" alt="setting page border and surround header in Word" />
+<figcaption aria-hidden="true">setting page border and surround header in Word</figcaption>
+</figure>
+<p>設定すると次のようになる。</p>
+<figure>
+<img src="../../../images/2024-11-11-asciidoc-page-border-in-margin-jp-image-3.png" alt="result of page border and surround header in Word" />
+<figcaption aria-hidden="true">result of page border and surround header in Word</figcaption>
+</figure>
 </article>
 
 <div class="card mt-5">

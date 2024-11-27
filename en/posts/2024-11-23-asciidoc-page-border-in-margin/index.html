@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>S6T5 - How to write page border with AsciiDoctor</title>
+        <title>S6T5 - How to write page border with Asciidoctor</title>
         <link rel="stylesheet" href="../../../css/bulma.css" />
         <link rel="stylesheet" href="../../../css/syntax.css" />
         <script src="../../../js/default.js"></script>
@@ -106,7 +106,7 @@
         
         <main class="container is-fluid mt-5">
             <div class="content">
-                <h2>How to write page border with AsciiDoctor</h2>
+                <h2>How to write page border with Asciidoctor</h2>
                 <div class="container my-5">
     <table class="table">
         <thead>
@@ -131,7 +131,7 @@
                 </td>  
                 <td>
                     
-                    2024/11/23
+                    2024/11/26
                     
                 </td>
                 
@@ -149,46 +149,28 @@
 
 </div>
 <article class="container">
-    <p>I introduce how to write page border with <code>AsciiDoctor</code>.</p>
+    <h2 id="summary"><a href="#summary" class="headerLink" title="Summary">Summary</a></h2>
+<p>I introduce how to write page border with <code>Asciidoctor</code>.</p>
 <p>There is a feature: <code>Page Border</code> and <code>Surround header</code> in Word of Microsoft’s Office.</p>
-<p>How to set <code>Page Border</code> in Word is below.</p>
-<ul>
-<li>Open <code>Design</code> → <code>PageBorders</code></li>
-<li>Push <code>Box</code></li>
-<li>Push <code>OK</code></li>
-</ul>
-<figure>
-<img src="../../../images/2024-11-11-asciidoc-page-border-in-margin-en-image-1.png" alt="setting page border in Word" />
-<figcaption aria-hidden="true">setting page border in Word</figcaption>
-</figure>
-<p>Result is below.</p>
-<figure>
-<img src="../../../images/2024-11-11-asciidoc-page-border-in-margin-en-image-1-1.png" alt="result of page border in Word" />
-<figcaption aria-hidden="true">result of page border in Word</figcaption>
-</figure>
-<p>How to set <code>Page Border</code> in Word is below.</p>
-<ul>
-<li>Open <code>Design</code> → <code>PageBorders</code></li>
-<li>Open <code>Options...</code></li>
-<li>Set <code>Measure from</code> to <code>Text</code></li>
-<li>Check <code>Surround header</code></li>
-</ul>
-<figure>
-<img src="../../../images/2024-11-11-asciidoc-page-border-in-margin-en-image-2.png" alt="setting page border and surround header in Word" />
-<figcaption aria-hidden="true">setting page border and surround header in Word</figcaption>
-</figure>
-<p>Result is below.</p>
-<figure>
-<img src="../../../images/2024-11-11-asciidoc-page-border-in-margin-en-image-3.png" alt="result of page border and surround header in Word" />
-<figcaption aria-hidden="true">result of page border and surround header in Word</figcaption>
-</figure>
 <p>This converter was made for substitution of their.</p>
+<h2 id="demo"><a href="#demo" class="headerLink" title="Demo">Demo</a></h2>
 <p>Result looks like below.</p>
 <figure>
 <img src="../../../images/2024-11-11-asciidoc-page-border-in-margin-jp-image-4.png" alt="script results" />
 <figcaption aria-hidden="true">script results</figcaption>
 </figure>
-<p>There is usage in <a href="https://github.com/Shumpei-Tanaka/asciidoc-borderinmargin">repository: Shumpei-Tanaka/AsciiDoc-BorderInMargin</a> .</p>
+<h2 id="usage"><a href="#usage" class="headerLink" title="Usage">Usage</a></h2>
+<p>There is usage in <a href="https://github.com/Shumpei-Tanaka/asciidoc-borderinmargin">repository: Shumpei-Tanaka/AsciiDoc-BorderInMargin</a>.</p>
+<h2 id="script"><a href="#script" class="headerLink" title="Script">Script</a></h2>
+<p>There is latest in <a href="https://github.com/Shumpei-Tanaka/asciidoc-borderinmargin">repository: Shumpei-Tanaka/AsciiDoc-BorderInMargin</a> .</p>
+<p><code>write_header_border</code> is function to write border surround header.
+It takes values below from style setting.</p>
+<ul>
+<li>header margin</li>
+<li>herder column ratios</li>
+</ul>
+<p><code>write_mergin_border</code> is function to write page border in mergin.
+It takes margin values from style setting.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">class</span> <span class="dt">PDFConverterCustomTitlePage</span> <span class="kw">&lt;</span> (<span class="dt">Asciidoctor</span><span class="kw">::</span><span class="dt">Converter</span><span class="at">.for</span> <span class="vs">'pdf'</span>)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  register_for <span class="vs">'pdf'</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">def</span> ink_title_page(doc)</span>
@@ -263,6 +245,39 @@
 <span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>  stroke_vertical_rule <span class="vs">'000000'</span>, <span class="wa">line_width: </span>line_width, <span class="wa">at: </span>p_r, <span class="wa">top_projection: </span>line_offset,</span>
 <span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>                                 <span class="wa">bottom_projection: </span>line_offset</span>
 <span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a><span class="cf">end</span></span></code></pre></div>
+<h2 id="appendix"><a href="#appendix" class="headerLink" title="Appendix">Appendix</a></h2>
+<p>Way to set <code>Page Border</code> and <code>Surround header</code> in Word of Microsoft’s Office.</p>
+<p>How to set <code>Page Border</code> in Word is below.</p>
+<ul>
+<li>Open <code>Design</code> → <code>PageBorders</code></li>
+<li>Push <code>Box</code></li>
+<li>Push <code>OK</code></li>
+</ul>
+<figure>
+<img src="../../../images/2024-11-11-asciidoc-page-border-in-margin-en-image-1.png" alt="setting page border in Word" />
+<figcaption aria-hidden="true">setting page border in Word</figcaption>
+</figure>
+<p>Result is below.</p>
+<figure>
+<img src="../../../images/2024-11-11-asciidoc-page-border-in-margin-en-image-1-1.png" alt="result of page border in Word" />
+<figcaption aria-hidden="true">result of page border in Word</figcaption>
+</figure>
+<p>How to set <code>Page Border</code> in Word is below.</p>
+<ul>
+<li>Open <code>Design</code> → <code>PageBorders</code></li>
+<li>Open <code>Options...</code></li>
+<li>Set <code>Measure from</code> to <code>Text</code></li>
+<li>Check <code>Surround header</code></li>
+</ul>
+<figure>
+<img src="../../../images/2024-11-11-asciidoc-page-border-in-margin-en-image-2.png" alt="setting page border and surround header in Word" />
+<figcaption aria-hidden="true">setting page border and surround header in Word</figcaption>
+</figure>
+<p>Result is below.</p>
+<figure>
+<img src="../../../images/2024-11-11-asciidoc-page-border-in-margin-en-image-3.png" alt="result of page border and surround header in Word" />
+<figcaption aria-hidden="true">result of page border and surround header in Word</figcaption>
+</figure>
 </article>
 
 <div class="card mt-5">
