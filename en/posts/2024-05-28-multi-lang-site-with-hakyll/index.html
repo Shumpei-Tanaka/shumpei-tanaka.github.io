@@ -1,245 +1,93 @@
-<!doctype html>
-<html lang="en" class="has-navbar-fixed-top" style="scroll-padding-top: 70px;" data-theme="dark">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>S6T5 - to build multi lang site with Hakyll</title>
-        <link rel="stylesheet" href="../../../css/bulma.css" />
-        <link rel="stylesheet" href="../../../css/syntax.css" />
-        <script src="../../../js/default.js"></script>
-        <meta name="msapplication-square70x70logo" content="/favicons/site-tile-70x70.png">
-        <meta name="msapplication-square150x150logo" content="/favicons/site-tile-150x150.png">
-        <meta name="msapplication-wide310x150logo" content="/favicons/site-tile-310x150.png">
-        <meta name="msapplication-square310x310logo" content="/favicons/site-tile-310x310.png">
-        <meta name="msapplication-TileColor" content="#0078d7">
-        <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="../../../favicons/favicon.ico">
-        <link rel="icon" type="image/vnd.microsoft.icon" href="../../../favicons/favicon.ico">
-        <link rel="apple-touch-icon" sizes="57x57" href="../../../favicons/apple-touch-icon-57x57.png">
-        <link rel="apple-touch-icon" sizes="60x60" href="../../../favicons/apple-touch-icon-60x60.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="../../../favicons/apple-touch-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="76x76" href="../../../favicons/apple-touch-icon-76x76.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="../../../favicons/apple-touch-icon-114x114.png">
-        <link rel="apple-touch-icon" sizes="120x120" href="../../../favicons/apple-touch-icon-120x120.png">
-        <link rel="apple-touch-icon" sizes="144x144" href="../../../favicons/apple-touch-icon-144x144.png">
-        <link rel="apple-touch-icon" sizes="152x152" href="../../../favicons/apple-touch-icon-152x152.png">
-        <link rel="apple-touch-icon" sizes="180x180" href="../../../favicons/apple-touch-icon-180x180.png">
-        <link rel="icon" type="image/png" sizes="36x36" href="../../../favicons/android-chrome-36x36.png">
-        <link rel="icon" type="image/png" sizes="48x48" href="../../../favicons/android-chrome-48x48.png">
-        <link rel="icon" type="image/png" sizes="72x72" href="../../../favicons/android-chrome-72x72.png">
-        <link rel="icon" type="image/png" sizes="96x96" href="../../../favicons/android-chrome-96x96.png">
-        <link rel="icon" type="image/png" sizes="128x128" href="../../../favicons/android-chrome-128x128.png">
-        <link rel="icon" type="image/png" sizes="144x144" href="../../../favicons/android-chrome-144x144.png">
-        <link rel="icon" type="image/png" sizes="152x152" href="../../../favicons/android-chrome-152x152.png">
-        <link rel="icon" type="image/png" sizes="192x192" href="../../../favicons/android-chrome-192x192.png">
-        <link rel="icon" type="image/png" sizes="256x256" href="../../../favicons/android-chrome-256x256.png">
-        <link rel="icon" type="image/png" sizes="384x384" href="../../../favicons/android-chrome-384x384.png">
-        <link rel="icon" type="image/png" sizes="512x512" href="../../../favicons/android-chrome-512x512.png">
-        <link rel="icon" type="image/png" sizes="36x36" href="../../../favicons/icon-36x36.png">
-        <link rel="icon" type="image/png" sizes="48x48" href="../../../favicons/icon-48x48.png">
-        <link rel="icon" type="image/png" sizes="72x72" href="../../../favicons/icon-72x72.png">
-        <link rel="icon" type="image/png" sizes="96x96" href="../../../favicons/icon-96x96.png">
-        <link rel="icon" type="image/png" sizes="128x128" href="../../../favicons/icon-128x128.png">
-        <link rel="icon" type="image/png" sizes="144x144" href="../../../favicons/icon-144x144.png">
-        <link rel="icon" type="image/png" sizes="152x152" href="../../../favicons/icon-152x152.png">
-        <link rel="icon" type="image/png" sizes="160x160" href="../../../favicons/icon-160x160.png">
-        <link rel="icon" type="image/png" sizes="192x192" href="../../../favicons/icon-192x192.png">
-        <link rel="icon" type="image/png" sizes="196x196" href="../../../favicons/icon-196x196.png">
-        <link rel="icon" type="image/png" sizes="256x256" href="../../../favicons/icon-256x256.png">
-        <link rel="icon" type="image/png" sizes="384x384" href="../../../favicons/icon-384x384.png">
-        <link rel="icon" type="image/png" sizes="512x512" href="../../../favicons/icon-512x512.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="../../../favicons/icon-16x16.png">
-        <link rel="icon" type="image/png" sizes="24x24" href="../../../favicons/icon-24x24.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="../../../favicons/icon-32x32.png">
-        <link rel="manifest" href="../../../favicons/manifest.json">
-        <meta name="google-site-verification" content="sH_aP0y8KDs49AEPgsssCCx6_ajKdyX1zS-gOBqLZeQ" />
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-T5DMN2Z25W"></script>
-        <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-T5DMN2Z25W');
-        </script>
-    </head>
-    <body style="scroll-padding-top: 70px;">
-            <header class="navbar has-background-primary-dark is-fixed-top" role="navigation" aria-label="main navigation">
-                <div class="navbar-brand">
-                    <a class="navbar-item" href="../../../">
-                        <span class="title is-1">
-                            S6T5
-                        </span>
-                    </a>
-                    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="mainnav">
-                        <span aria-hidden="true"></span>
-                        <span aria-hidden="true"></span>
-                        <span aria-hidden="true"></span>
-                        <span aria-hidden="true"></span>
-                    </a>
-                </div>
-                <div id="mainnav" class="navbar-menu has-background-primary-dark">
-                    <div class="navbar-start"> 
-                        <a class="navbar-item is-size-4 has-text-info" href="../../../">Home</a>
-                        <a class="navbar-item is-size-4 has-text-info" href="../../../archive">Archive</a>
-                    </div>
-                </div>
-            </header>
-        
-        <div class="mt-4" align="right">
-            <table class="table has-background-info-dark">
-                <tbody>
-                    <th class="is-vcentered is-centered">
-                        lang
-                    </th>
-                    
-                        <td>
-                            <a class="button is-link" href="../../../en/posts/2024-05-28-multi-lang-site-with-hakyll/">en</a>
-                        </td>
-                    
-                        <td>
-                            <a class="button is-link" href="../../../ja/posts/2024-05-28-multi-lang-site-with-hakyll/">ja</a>
-                        </td>
-                    
-                </tbody>
-            </table>
-        </div>
-        
-        <main class="container is-fluid mt-5">
-            <div class="content">
-                <h2>to build multi lang site with Hakyll</h2>
-                <div class="container my-5">
-    <table class="table">
-        <thead>
-            <tr>
-                <th>
-                    Published
-                </th>
-                <th>
-                    Last Update 
-                </th>
-                
-                    <th>
-                        author
-                    </th>
-                
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>
-                    2024/05/25
-                </td>  
-                <td>
-                    
-                    2024/05/28
-                    
-                </td>
-                
-                    <td>
-                        Shumpei Tanaka
-                    </td>
-                
-            </tr>
-        </tbody>
-    </table>
-
-    
-
-    
-
-</div>
-<article class="container">
-    <h2 id="multi-lang-by-file-base"><a href="#multi-lang-by-file-base" class="headerLink" title="multi-lang by file base">multi-lang by file base</a></h2>
+<!doctype html><html lang="en" dir="ltr"><head><title>to build multi lang site with Hakyll | S6T5</title><meta charset="utf-8"><link rel="preload" href="../../../index-0c03d889.css" as="style"><link rel="preload" href="../../../prescript-2bfc6315.js" as="script"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&#x26;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&#x26;family=IBM Plex Mono:wght@400;600&#x26;display=swap"><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="og:site_name" content="S6T5"><meta property="og:title" content="to build multi lang site with Hakyll | S6T5"><meta property="og:type" content="website"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="to build multi lang site with Hakyll | S6T5"><meta name="twitter:description" content="multi-lang by file base Create a multi-lang site by writing articles with the following structure."><meta property="og:description" content="multi-lang by file base Create a multi-lang site by writing articles with the following structure."><meta property="og:image:alt" content="multi-lang by file base Create a multi-lang site by writing articles with the following structure."><meta property="twitter:domain" content="shumpei-tanaka.github.io"><meta property="og:url" content="https://shumpei-tanaka.github.io/en/posts/2024-05-28-multi-lang-site-with-hakyll"><meta property="twitter:url" content="https://shumpei-tanaka.github.io/en/posts/2024-05-28-multi-lang-site-with-hakyll"><link rel="icon" href="../../../static/icon.png"><meta name="description" content="multi-lang by file base Create a multi-lang site by writing articles with the following structure."><meta name="generator" content="Quartz"><link href="../../../index-0c03d889.css" rel="stylesheet" type="text/css" data-persist="true"><link href="../../../component-7f390435.css" rel="stylesheet" type="text/css" data-persist="true"><link href="../../../component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"><link href="../../../component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"><link href="../../../component-d10d00ab.css" rel="stylesheet" type="text/css" data-persist="true"><link href="../../../component-e427079e.css" rel="stylesheet" type="text/css" data-persist="true"><link href="../../../component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"><link href="../../../component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"><link href="../../../component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"><link href="../../../component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"><link href="../../../component-b43df3ac.css" rel="stylesheet" type="text/css" data-persist="true"><link href="../../../component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"><link href="../../../component-9406c2cd.css" rel="stylesheet" type="text/css" data-persist="true"><link href="../../../component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"><link href="../../../component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"><link href="../../../component-02d2a92c.css" rel="stylesheet" type="text/css" data-persist="true"><link href="../../../component-9f9b2774.css" rel="stylesheet" type="text/css" data-persist="true"><link href="../../../component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"><link href="../../../component-7262b5a7.css" rel="stylesheet" type="text/css" data-persist="true"><link href="../../../static/resource-style-11d41004.css" rel="stylesheet" type="text/css" data-persist="true"><link href="../../../static/resource-style-26a99b87.css" rel="stylesheet" type="text/css" data-persist="true"><link href="../../../static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"><link href="../../../static/resource-style-0be4fa7f.css" rel="stylesheet" type="text/css" data-persist="true"><link href="../../../static/resource-style-d2eefd3a.css" rel="stylesheet" type="text/css" data-persist="true"><link href="../../../static/resource-style-a71023bb.css" rel="stylesheet" type="text/css" data-persist="true"><link href="../../../static/resource-style-89d3cd78.css" rel="stylesheet" type="text/css" data-persist="true"><link href="../../../static/resource-style-c562457b.css" rel="stylesheet" type="text/css" data-persist="true"><link href="../../../static/resource-style-d812ce45.css" rel="stylesheet" type="text/css" data-persist="true"><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"><script src="../../../prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../../static/contentIndex.json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json() }).catch(e => { console.warn("[Quartz] Could not load ../../../static/contentIndex.json (" + e.message + "); is configuration.contentIndex disabled?"); return {} });window.quartzStaticUrl = new URL("../../../static/", location.href).href</script><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Segoe%20UI%2C%20BIZ%20UDPGothic%2C%20Schibsted%20Grotesk%3Awght%40400%3B700&#x26;family=Source%20Sans%20Pro%3Aital%2Cwght%400%2C400%3B0%2C600%3B1%2C400%3B1%2C600&#x26;family=Commit%20Mono%2C%20BIZ%20UDPGothic%2C%20IBM%20Plex%20Mono%3Awght%40400%3B600&#x26;display=swap"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image" content="https://shumpei-tanaka.github.io/en/posts/2024-05-28-multi-lang-site-with-hakyll-og-image.webp"><meta property="og:image:url" content="https://shumpei-tanaka.github.io/en/posts/2024-05-28-multi-lang-site-with-hakyll-og-image.webp"><meta name="twitter:image" content="https://shumpei-tanaka.github.io/en/posts/2024-05-28-multi-lang-site-with-hakyll-og-image.webp"><meta property="og:image:type" content="image/webp"><meta name="google-site-verification" content="sH_aP0y8KDs49AEPgsssCCx6_ajKdyX1zS-gOBqLZeQ"></head><body data-slug="en/posts/2024-05-28-multi-lang-site-with-hakyll" data-basepath=""><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar" data-sidebar-mode="fit"><h2 class="page-title"><a href="../../../">S6T5</a></h2><div class="mobile-only"><div class="spacer" data-quartz-plugin="spacer" data-quartz-component="Spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search" data-quartz-plugin="search" data-quartz-component="Search"><button class="search-button" aria-label="Search" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>Search</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="Search for something..." placeholder="Search for something..."><div class="search-layout" data-preview="true" data-field-priority="[&#x22;title&#x22;,&#x22;content&#x22;,&#x22;tags&#x22;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="Dark mode" data-quartz-plugin="darkmode" data-quartz-component="Darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="Dark mode"><title>Dark mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="Light mode"><title>Light mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="Reader mode" data-quartz-plugin="reader-mode" data-quartz-component="ReaderMode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="Reader mode"><title>Reader mode</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&#x22;order&#x22;:[&#x22;filter&#x22;,&#x22;map&#x22;,&#x22;sort&#x22;],&#x22;sortFn&#x22;:&#x22;(a, b) => {\n    if (!a.isFolder &#x26;&#x26; !b.isFolder || a.isFolder &#x26;&#x26; b.isFolder) {\n      return (a.displayName || \&#x22;\&#x22;).localeCompare(b.displayName || \&#x22;\&#x22;, void 0, {\n        numeric: true,\n        sensitivity: \&#x22;base\&#x22;\n      });\n    }\n    if (!a.isFolder &#x26;&#x26; b.isFolder) {\n      return 1;\n    }\n    return -1;\n  }&#x22;,&#x22;filterFn&#x22;:&#x22;(node) => node.slugSegment !== \&#x22;tags\&#x22;&#x22;,&#x22;mapFn&#x22;:&#x22;(node) => {\n    return node;\n  }&#x22;}" data-quartz-plugin="explorer" data-quartz-component="Explorer"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-7" aria-label="Explorer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-7" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><header><nav class="language-switch" aria-label="Language"><span aria-current="page">EN</span><span class="separator">|</span><a href="../../../ja/posts/2024-05-28-multi-lang-site-with-hakyll/">JA</a></nav></header><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../../">Hideout</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="">to build multi lang site with Hakyll</a></div></nav><h1 class="article-title" data-quartz-plugin="article-title" data-quartz-component="ArticleTitle">to build multi lang site with Hakyll</h1><table class="content-meta"><tbody><tr><th>Author</th><td>Shumpei Tanaka</td></tr><tr><th>Published</th><td>2024/05/25</td></tr><tr><th>Modified</th><td>2024/05/28</td></tr></tbody></table></div></div><article class="popover-hint" data-quartz-plugin="content-page" data-quartz-component="ContentPage"><div class="markdown-preview-view markdown-rendered"><h2 id="multi-lang-by-file-base">multi-lang by file base<a role="anchor" aria-hidden="" tabindex="-1" data-no-popover="" href="#multi-lang-by-file-base" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
 <p>Create a multi-lang site by writing articles with the following structure.</p>
 <ul>
 <li>posts/2024-05-28-filename-en.md</li>
 <li>posts/2024-05-28-filename-jp.md</li>
 </ul>
-<h2 id="specific-example"><a href="#specific-example" class="headerLink" title="specific example">specific example</a></h2>
-<p>This site is being created with the above structure.
-The engine part will be separated and released at a later date.</p>
-<h2 id="modify-route"><a href="#modify-route" class="headerLink" title="modify Route">modify Route</a></h2>
+<h2 id="modify-route">modify Route<a role="anchor" aria-hidden="" tabindex="-1" data-no-popover="" href="#modify-route" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
 <p>First, change the <code>Route</code>. The following is an image of the change.</p>
 <ul>
 <li>path: original source
 <ul>
 <li>posts/2024-05-28-filename-en.md</li>
 <li>posts/2024-05-28-filename-jp.md</li>
-</ul></li>
+</ul>
+</li>
 <li>path: converted html
 <ul>
 <li>en/2024-05-28-filename.html</li>
 <li>jp/2024-05-28-filename.html</li>
-</ul></li>
+</ul>
+</li>
 </ul>
 <p>Excerpt : codes of Route</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>match (fromArticle <span class="st">&quot;posts/*&quot;</span>) <span class="op">$</span> <span class="kw">do</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    route langRoute</span></code></pre></div>
-<div class="sourceCode" id="cb2"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ot">langRoute ::</span> <span class="dt">Routes</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>langRoute <span class="ot">=</span> customRoute ((<span class="ot">`replaceExtension`</span> <span class="st">&quot;.html&quot;</span>) <span class="op">.</span> getLangPath)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="ot">langseperator ::</span> <span class="dt">String</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>langseperator <span class="ot">=</span> <span class="st">&quot;-&quot;</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="ot">takeLang ::</span> <span class="dt">Identifier</span> <span class="ot">-&gt;</span> <span class="dt">String</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>takeLang <span class="ot">=</span> <span class="fu">last</span> <span class="op">.</span> splitAll langseperator <span class="op">.</span> takeBaseName <span class="op">.</span> toFilePath</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="ot">dropLang ::</span> <span class="dt">Identifier</span> <span class="ot">-&gt;</span> <span class="dt">String</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>dropLang <span class="ot">=</span> L.intercalate langseperator <span class="op">.</span> <span class="fu">init</span> <span class="op">.</span> splitAll langseperator <span class="op">.</span> toFilePath</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="ot">getLangPath ::</span> <span class="dt">Identifier</span> <span class="ot">-&gt;</span> <span class="dt">String</span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>getLangPath <span class="fu">id</span> <span class="ot">=</span> lang <span class="ot">`combine`</span> dropLang <span class="fu">id</span></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  <span class="kw">where</span></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    lang <span class="ot">=</span> takeLang <span class="fu">id</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="haskell" data-theme="github-light github-dark"><code data-language="haskell" data-theme="github-light github-dark" style="display:grid;"><span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">match (fromArticle </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">"posts/*"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">$</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword"> do</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    route langRoute</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="haskell" data-theme="github-light github-dark"><code data-language="haskell" data-theme="github-light github-dark" style="display:grid;"><span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">langRoute</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator"> ::</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword"> Routes</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">langRoute </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> customRoute ((</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="punctuation">`replaceExtension`</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> ".html"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">.</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> getLangPath)</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">langseperator</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator"> ::</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword"> String</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">langseperator </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> "-"</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">takeLang</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator"> ::</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword"> Identifier</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator"> -></span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword"> String</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">takeLang </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> last </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">.</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> splitAll langseperator </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">.</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> takeBaseName </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">.</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> toFilePath</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">dropLang</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator"> ::</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword"> Identifier</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator"> -></span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword"> String</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">dropLang </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function"> L.</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">intercalate langseperator </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">.</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> init </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">.</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> splitAll langseperator </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">.</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> toFilePath</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">getLangPath</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator"> ::</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword"> Identifier</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator"> -></span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword"> String</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">getLangPath id </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> lang </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="punctuation">`combine`</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> dropLang id</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">  where</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    lang </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> takeLang id</span></span></code></pre></figure>
 <p>The operations being performed are simple and include the following</p>
 <ul>
 <li>get filepath from <code>Identifier</code></li>
 <li>pick lang-code such as like <code>-en</code>, <code>-jp</code></li>
 <li>swap and re-concat with <code>/</code></li>
 </ul>
-<h2 id="embed-link-which-another-lang"><a href="#embed-link-which-another-lang" class="headerLink" title="embed link which another lang">embed link which another lang</a></h2>
+<h2 id="embed-link-which-another-lang">embed link which another lang<a role="anchor" aria-hidden="" tabindex="-1" data-no-popover="" href="#embed-link-which-another-lang" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
 <p>It is achieved as follows.</p>
 <ul>
 <li>search same <code>filename</code> from <code>Identifier</code> such as :<code>filename-lang.md</code></li>
 <li>put link which search result</li>
 </ul>
-<div class="sourceCode" id="cb3"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ot">anothorLangFields ::</span> <span class="dt">String</span> <span class="ot">-&gt;</span> <span class="dt">Snapshot</span> <span class="ot">-&gt;</span> <span class="dt">Context</span> <span class="dt">String</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>anothorLangFields name snapshot <span class="ot">=</span> listFieldWith name baseCtx f</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">where</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    f item <span class="ot">=</span> loadAllSnapshots (fromGlob (mainname <span class="op">++</span> <span class="st">&quot;*&quot;</span>)) snapshot</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>      <span class="kw">where</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>        <span class="fu">id</span> <span class="ot">=</span> itemIdentifier item</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>        mainname <span class="ot">=</span> dropLang <span class="fu">id</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>        lang <span class="ot">=</span> takeLang <span class="fu">id</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="haskell" data-theme="github-light github-dark"><code data-language="haskell" data-theme="github-light github-dark" style="display:grid;"><span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">anothorLangFields</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator"> ::</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword"> String</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator"> -></span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword"> Snapshot</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator"> -></span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword"> Context</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword"> String</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">anothorLangFields name snapshot </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> listFieldWith name baseCtx f</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">  where</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    f item </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> loadAllSnapshots (fromGlob (mainname </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">++</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> "*"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">)) snapshot</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">      where</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        id </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> itemIdentifier item</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        mainname </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> dropLang id</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        lang </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> takeLang id</span></span></code></pre></figure>
 <p>below is how to use <code>anothorLangFields</code>.</p>
 <ul>
 <li>make <code>snapshot</code></li>
 <li>apply <code>template</code> with <code>postCtx</code></li>
 </ul>
-<div class="sourceCode" id="cb4"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>match (fromArticle <span class="st">&quot;posts/*&quot;</span>) <span class="op">$</span> <span class="kw">do</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    route langRoute</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    compile <span class="op">$</span> <span class="kw">do</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>        pandocCompiler</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>            <span class="op">&gt;&gt;=</span> saveSnapshot <span class="st">&quot;posts-content&quot;</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>            <span class="op">&gt;&gt;=</span> loadAndApplyTemplate (idBase <span class="st">&quot;templates/post.html&quot;</span>) postCtx</span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="haskell" data-theme="github-light github-dark"><code data-language="haskell" data-theme="github-light github-dark" style="display:grid;"><span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">match (fromArticle </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">"posts/*"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">$</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword"> do</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    route langRoute</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    compile </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">$</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword"> do</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        pandocCompiler</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">            >>=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> saveSnapshot </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">"posts-content"</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">            >>=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> loadAndApplyTemplate (idBase </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">"templates/post.html"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">) postCtx</span></span></code></pre></figure>
 <ul>
 <li><code>postCtx</code> is to connect <code>baseCtx</code> and <code>anothorLangFields</code>.</li>
 </ul>
-<div class="sourceCode" id="cb5"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ot">postCtx ::</span> <span class="dt">Context</span> <span class="dt">String</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>postCtx <span class="ot">=</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    baseCtx</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>        <span class="ot">`mappend`</span> anothorLangFields <span class="st">&quot;anothorLangs&quot;</span> <span class="st">&quot;posts-content&quot;</span></span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="haskell" data-theme="github-light github-dark"><code data-language="haskell" data-theme="github-light github-dark" style="display:grid;"><span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">postCtx</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator"> ::</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword"> Context</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword"> String</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">postCtx </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    baseCtx</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="punctuation">        `mappend`</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> anothorLangFields </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">"anothorLangs"</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> "posts-content"</span></span></code></pre></figure>
 <ul>
 <li><code>baseCtx</code> : a context to embed basic info</li>
 </ul>
-<div class="sourceCode" id="cb6"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ot">baseCtx ::</span> <span class="dt">Context</span> <span class="dt">String</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>baseCtx <span class="ot">=</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    dateField <span class="st">&quot;date&quot;</span> <span class="st">&quot;%Y/%m/%d&quot;</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>        <span class="ot">`mappend`</span> dateFieldMeta <span class="st">&quot;last-modified&quot;</span> <span class="st">&quot;last-modified&quot;</span> <span class="st">&quot;%Y/%m/%d&quot;</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>        <span class="ot">`mappend`</span> readTimeField <span class="st">&quot;readtime&quot;</span> <span class="st">&quot;posts-content&quot;</span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>        <span class="ot">`mappend`</span> langField <span class="st">&quot;lang&quot;</span></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>        <span class="ot">`mappend`</span> sameLangField <span class="st">&quot;home&quot;</span> <span class="st">&quot;index&quot;</span></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>        <span class="ot">`mappend`</span> defaultContext</span></code></pre></div>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="haskell" data-theme="github-light github-dark"><code data-language="haskell" data-theme="github-light github-dark" style="display:grid;"><span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">baseCtx</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator"> ::</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword"> Context</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword"> String</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">baseCtx </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    dateField </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">"date"</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> "%Y/%m/%d"</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="punctuation">        `mappend`</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> dateFieldMeta </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">"last-modified"</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> "last-modified"</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> "%Y/%m/%d"</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="punctuation">        `mappend`</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> readTimeField </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">"readtime"</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> "posts-content"</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="punctuation">        `mappend`</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> langField </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">"lang"</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="punctuation">        `mappend`</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> sameLangField </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">"home"</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> "index"</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="punctuation">        `mappend`</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> defaultContext</span></span></code></pre></figure>
 <p>The context now has the following structure</p>
 <ul>
 <li>date</li>
@@ -256,90 +104,44 @@ The engine part will be separated and released at a later date.</p>
 <li>lang</li>
 <li>home</li>
 <li>(defaultContext)</li>
-</ul></li>
+</ul>
+</li>
 </ul>
 <p>It can be called as like below in <code>template</code>.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>$for(anothorLangs)$</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">tr</span><span class="dt">&gt;</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">td</span><span class="dt">&gt;</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;$url$&quot;</span><span class="dt">&gt;</span>$title$ ($lang$)<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">td</span><span class="dt">&gt;</span></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">td</span><span class="dt">&gt;</span>$date$<span class="dt">&lt;/</span><span class="kw">td</span><span class="dt">&gt;</span></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">td</span><span class="dt">&gt;</span>$if(last-modified)$ $last-modified$ $else$ $date$ $endif$<span class="dt">&lt;/</span><span class="kw">td</span><span class="dt">&gt;</span></span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">tr</span><span class="dt">&gt;</span></span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>$endfor$</span></code></pre></div>
-<h2 id="to-use-inter-link-in-md-with-modified-route"><a href="#to-use-inter-link-in-md-with-modified-route" class="headerLink" title="to use inter link in md with modified Route">to use inter link in md with modified <code>Route</code></a></h2>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="html" data-theme="github-light github-dark"><code data-language="html" data-theme="github-light github-dark" style="display:grid;"><span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">$for(anothorLangs)$</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">&#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">tr</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">></span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">    &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">td</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">></span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">        &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">a</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="important"> href</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">"$url$"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">>$title$ ($lang$)&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">a</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">></span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">    &#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">td</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">></span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">    &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">td</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">>$date$&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">td</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">></span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">    &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">td</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">>$if(last-modified)$ $last-modified$ $else$ $date$ $endif$&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">td</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">></span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">tr</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">></span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">$endfor$</span></span></code></pre></figure>
+<h2 id="to-use-inter-link-in-md-with-modified-route">to use inter link in md with modified <code>Route</code><a role="anchor" aria-hidden="" tabindex="-1" data-no-popover="" href="#to-use-inter-link-in-md-with-modified-route" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
 <p>This is separated into a separate page due to its more general content.</p>
-<p><a href="../../../en/posts/2024-05-28-inter-link-routing-hakyll">to use inter link in md with modified Route by Hakyll</a></p>
-<h2 id="to-reconstruct-post-list"><a href="#to-reconstruct-post-list" class="headerLink" title="to reconstruct post list">to reconstruct post list</a></h2>
+<p><a href="../../../en/posts/2024-05-28-inter-link-routing-hakyll/" class="internal internal-link alias" data-slug="en/posts/2024-05-28-inter-link-routing-hakyll">to use inter link in md with modified Route by Hakyll</a></p>
+<h2 id="to-reconstruct-post-list">to reconstruct post list<a role="anchor" aria-hidden="" tabindex="-1" data-no-popover="" href="#to-reconstruct-post-list" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
 <p><code>-en.md</code> and <code>-jp.md</code> will be lined up respectively if <code>posts/*.md</code> read in this file-based system.</p>
 <p>but necessary is unieque one of same <code>file</code> in <code>posts/file-lang.md</code>.</p>
 <p>apply <code>filterUniqs</code> against<code>posts/*</code> like the following and save only unique <code>file</code>.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>compile <span class="op">$</span> <span class="kw">do</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    posts <span class="ot">&lt;-</span> recentFirst <span class="op">.</span> filterUniqs <span class="op">=&lt;&lt;</span> loadAllSnapshots <span class="st">&quot;posts/*&quot;</span> <span class="st">&quot;posts-content&quot;</span></span></code></pre></div>
-<p><code>filterUniqs</code> is a function to reconstruct <code>[Item String]</code>.
-pick files which filename dropped a part <code>-lang</code> is not same.
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="haskell" data-theme="github-light github-dark"><code data-language="haskell" data-theme="github-light github-dark" style="display:grid;"><span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">compile </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">$</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword"> do</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    posts </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">&#x3C;-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> recentFirst </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">.</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> filterUniqs </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=&#x3C;&#x3C;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> loadAllSnapshots </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">"posts/*"</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> "posts-content"</span></span></code></pre></figure>
+<p><code>filterUniqs</code> is a function to reconstruct <code>[Item String]</code>.<br>
+pick files which filename dropped a part <code>-lang</code> is not same.<br>
 and concat picked items. and make a list to concated it.</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ot">filterUniqs ::</span> [<span class="dt">Item</span> <span class="dt">String</span>] <span class="ot">-&gt;</span> [<span class="dt">Item</span> <span class="dt">String</span>]</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>filterUniqs [] <span class="ot">=</span> []</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>filterUniqs (x <span class="op">:</span> xs) <span class="ot">=</span> x <span class="op">:</span> filterUniqs (<span class="fu">filter</span> ((<span class="op">/=</span> f x) <span class="op">.</span> f) xs)</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">where</span></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    f <span class="ot">=</span> dropLang <span class="op">.</span> itemIdentifier</span></code></pre></div>
-<p>This will achieve the expected operation.</p>
-</article>
-
-<div class="card mt-5">
-    <div class="card-header">
-        <p class="card-header-title title is-4">Say thank you</p>
-    </div>
-    <div class="card-content">
-        <div class="content">
-            If this post helps you, I'd be glad to get your support via the link below.
-        </div>
-        <a href="https://paypal.me/s6tanaka">
-    <img alt="paypal.me Badge" src="https://img.shields.io/badge/paypal.me-s6tanaka-white?style=flat-squere:badgeContent&logo=paypal">
-</a>
-<a href="https://www.buymeacoffee.com/s6tanaka">
-    <img alt="paypal.me Badge" src="https://img.shields.io/badge/buy_me_a_coffee-s6tanaka-white?style=flat-squere:badgeContent&logo=buymeacoffee&logocolor=#FFDD00">
-</a>
-    </div>
-</div>
-
-<div id="disqus_thread"></div>
-<script>
-    var disqus_config = function () {
-//    this.page.url = "/en/posts/2024-05-28-multi-lang-site-with-hakyll/";
-//    this.page.identifier = PAGE_IDENTIFIER;
-    this.language = "en";
-    };
-    
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://s6t4.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-
-            </div>
-        </main>
-
-        <footer class="footer">
-            <div class="content has-text-centered">
-                
-                    <a href="../../../">
-                
-                    back to home
-                </a>
-                <p>
-                    Site proudly generated by
-                    <a href="http://jaspervdj.be/hakyll">Hakyll</a>
-                    ,
-                    <a href="https://bulma.io/">Bulma</a>
-                </p>
-            </div>
-        </footer>
-    </body>
-</html>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="haskell" data-theme="github-light github-dark"><code data-language="haskell" data-theme="github-light github-dark" style="display:grid;"><span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">filterUniqs</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator"> ::</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> [</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">Item</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword"> String</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">] </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">-></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> [</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">Item</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword"> String</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">]</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">filterUniqs </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">[]</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator"> =</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation"> []</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">filterUniqs (x </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">:</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> xs) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> x </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">:</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> filterUniqs (filter ((</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">/=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> f x) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">.</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> f) xs)</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">  where</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    f </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> dropLang </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">.</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> itemIdentifier</span></span></code></pre></figure>
+<p>This will achieve the expected operation.</p></div></article><hr><div class="page-footer"></div></div><div class="right sidebar" data-sidebar-mode="fit"><div class="graph" data-quartz-plugin="graph" data-quartz-component="Graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&#x22;drag&#x22;:true,&#x22;zoom&#x22;:true,&#x22;depth&#x22;:1,&#x22;scale&#x22;:1.1,&#x22;repelForce&#x22;:0.5,&#x22;centerForce&#x22;:0.3,&#x22;linkDistance&#x22;:30,&#x22;fontSize&#x22;:0.6,&#x22;opacityScale&#x22;:1,&#x22;showTags&#x22;:true,&#x22;removeTags&#x22;:[],&#x22;focusOnHover&#x22;:false,&#x22;enableRadial&#x22;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&#x22;drag&#x22;:true,&#x22;zoom&#x22;:true,&#x22;depth&#x22;:-1,&#x22;scale&#x22;:0.9,&#x22;repelForce&#x22;:0.5,&#x22;centerForce&#x22;:0.2,&#x22;linkDistance&#x22;:30,&#x22;fontSize&#x22;:0.6,&#x22;opacityScale&#x22;:1,&#x22;showTags&#x22;:true,&#x22;removeTags&#x22;:[],&#x22;focusOnHover&#x22;:true,&#x22;enableRadial&#x22;:true}"></div></div></div><div class="toc" data-quartz-plugin="table-of-contents" data-quartz-component="TableOfContents"><button type="button" class="toc-header" aria-controls="toc-6" aria-expanded="true"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#multi-lang-by-file-base" data-for="multi-lang-by-file-base">multi-lang by file base</a></li><li class="depth-0"><a href="#modify-route" data-for="modify-route">modify Route</a></li><li class="depth-0"><a href="#embed-link-which-another-lang" data-for="embed-link-which-another-lang">embed link which another lang</a></li><li class="depth-0"><a href="#to-use-inter-link-in-md-with-modified-route" data-for="to-use-inter-link-in-md-with-modified-route">to use inter link in md with modified Route</a></li><li class="depth-0"><a href="#to-reconstruct-post-list" data-for="to-reconstruct-post-list">to reconstruct post list</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>Backlinks</h3><ul class="overflow"><li><a href="../../../ja/posts/2024-05-28-multi-lang-site-with-hakyll/" class="internal">Hakyllでファイルベースの多言語対応サイトを作る</a></li><li><a href="../../../articles.base/" class="internal">Articles</a></li></ul></div></div><footer><div class="support-links"><h2>Enjoying this site? 😄</h2><a href="https://paypal.me/s6tanaka"><img class="badge-light" alt="PayPal" src="https://img.shields.io/badge/paypal.me-s6tanaka-lightgray?style=flat-square&#x26;logo=paypal"><img class="badge-dark" alt="PayPal" src="https://img.shields.io/badge/paypal.me-s6tanaka-white?style=flat-square&#x26;logo=paypal"></a><a href="https://www.buymeacoffee.com/s6tanaka"><img class="badge-light" alt="Buy Me a Coffee" src="https://img.shields.io/badge/buy_me_a_coffee-s6tanaka-lightgray?style=flat-square&#x26;logo=buymeacoffee&#x26;logoColor=FFDD00"><img class="badge-dark" alt="Buy Me a Coffee" src="https://img.shields.io/badge/buy_me_a_coffee-s6tanaka-white?style=flat-square&#x26;logo=buymeacoffee&#x26;logoColor=FFDD00"></a></div><p>Site proudly generated by<a href="https://quartz.jzhao.xyz/"> Quartz 5</a></p></footer></div></div><script src="../../../static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-b151bd49.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../../postscript-1a8aa0ae.js" type="module" data-persist="true"></script></body></html>
